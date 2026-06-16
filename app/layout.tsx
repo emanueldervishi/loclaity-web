@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     template: "%s - Locality"
   },
   description:
-    "Turn Codex, Claude Code, Cursor, Copilot and other coding-agent sessions into searchable local memory."
+    "Turn Codex, Claude Code, Cursor, Copilot and other coding-agent sessions into searchable local memory.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png"
+  }
 };
 
 export default function RootLayout({

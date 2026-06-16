@@ -1,4 +1,4 @@
-import { CheckCircle2, CreditCard, ReceiptText } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Clock3, CreditCard, ReceiptText, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
@@ -34,85 +34,77 @@ export default async function DashboardBillingPage() {
 
   const plan = plans[user.plan];
   const status = user.subscriptionStatus || (user.plan === "FREE" ? "No subscription" : "Processing");
+  const renewal = user.currentPeriodEnd?.toLocaleDateString() || "Not scheduled";
 
   return (
-    <div className="flex flex-col gap-6">
-      <div className="max-w-2xl">
-        <Badge className="h-6 rounded-full px-2.5" variant="outline">
-          Subscription
-        </Badge>
-        <h1 className="mt-3 text-3xl font-medium tracking-tight md:text-4xl">Billing and plan.</h1>
-        <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          Review your current plan, renewal state, and subscription actions.
-        </p>
-      </div>
+    <div className="mx-auto flex w-full max-w-[1480px] flex-col gap-5">
+      <section className="grid items-stretch gap-5 xl:grid-cols-[1.12fr_0.88fr]">
+        <div className="overflow-hidden rounded-[1.75rem] border bg-[#07090c] p-2 text-white shadow-[0_30px_80px_rgba(2,6,23,0.18)]">
+          <div className="relative flex min-h-[360px] flex-col justify-between overflow-hidden rounded-[1.35rem] border border-white/10 bg-[radial-gradient(circle_at_16%_0%,rgba(20,184,166,0.2),transparent_34%),radial-gradient(circle_at_88%_12%,rgba(59,130,246,0.22),transparent_34%),linear-gradient(135deg,#10151d,#050607_68%)] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] md:p-8">
+            <div>
+              <Badge className="border-white/10 bg-white/10 text-white" variant="outline">
+                Billing
+              </Badge>
+              <h1 className="mt-5 max-w-2xl text-4xl font-medium leading-[0.95] tracking-[-0.055em] md:text-6xl">
+                Plan and payment controls.
+              </h1>
+              <p className="mt-5 max-w-2xl text-sm leading-6 text-white/62 md:text-base">
+                Keep your subscription state, renewal date, and billing actions in one place.
+              </p>
+            </div>
 
-      <section className="grid gap-4 lg:grid-cols-3">
-        <Card className="rounded-[1.5rem]">
-          <CardHeader>
-            <CardTitle>Current plan</CardTitle>
-            <CardDescription>Your workspace tier and monthly rate.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="text-4xl font-medium tracking-tight">{plan.name}</div>
-            <p className="mt-2 text-sm text-muted-foreground">${plan.price} per month</p>
-          </CardContent>
-        </Card>
-        <Card className="rounded-[1.5rem]">
-          <CardHeader>
-            <CardTitle>Subscription status</CardTitle>
-            <CardDescription>Billing state as reported for this account.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="text-lg font-medium tracking-tight">{status}</div>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Renewal date: {user.currentPeriodEnd?.toLocaleDateString() || "Not scheduled"}
-            </p>
-          </CardContent>
-        </Card>
-        <Card className="rounded-[1.5rem]">
-          <CardHeader>
-            <CardTitle>Portal access</CardTitle>
-            <CardDescription>Stripe handles invoices, payment methods, and subscription changes.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm leading-6 text-muted-foreground">
-              Use the billing portal for payment changes. Use pricing when you need to compare plans.
-            </p>
-          </CardContent>
-        </Card>
-      </section>
+            <div className="mt-10 grid gap-3 md:grid-cols-3">
+              {[
+                { label: "Plan", value: plan.name, detail: `$${plan.price}/month`, icon: CreditCard },
+                { label: "Status", value: status, detail: "Stripe source", icon: ShieldCheck },
+                { label: "Renews", value: renewal, detail: "current period", icon: Clock3 },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.07] p-4" key={item.label}>
+                    <div className="mb-6 flex items-center justify-between text-white/55">
+                      <span className="text-xs">{item.label}</span>
+                      <Icon className="size-4" />
+                    </div>
+                    <div className="truncate text-lg font-medium tracking-tight">{item.value}</div>
+                    <div className="mt-1 truncate text-xs text-white/48">{item.detail}</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
 
-      <section className="grid gap-4 xl:grid-cols-[1fr_0.8fr]">
-        <Card className="rounded-[1.5rem]">
-          <CardHeader className="flex flex-row items-start justify-between">
+        <Card className="flex h-full rounded-[1.75rem]">
+          <CardHeader className="flex flex-row items-start justify-between gap-4">
             <div>
               <CardTitle>{plan.name} plan</CardTitle>
               <CardDescription>{plan.description}</CardDescription>
             </div>
             <Badge variant="secondary">Current</Badge>
           </CardHeader>
-          <CardContent className="flex flex-col gap-6">
-            <div className="flex items-end gap-2">
-              <span className="text-5xl font-medium tracking-tight">${plan.price}</span>
-              <span className="pb-1 text-sm text-muted-foreground">per month</span>
+          <CardContent className="flex flex-1 flex-col gap-6">
+            <div>
+              <div className="flex items-end gap-2">
+                <span className="text-6xl font-medium tracking-[-0.055em]">${plan.price}</span>
+                <span className="pb-2 text-sm text-muted-foreground">/ month</span>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">Renews: {renewal}</p>
             </div>
 
-            <div className="rounded-[1.15rem] border">
+            <div className="rounded-[1.15rem] border bg-muted/20">
               <div className="flex items-center justify-between gap-4 p-4">
-                <span className="text-sm text-muted-foreground">Status</span>
+                <span className="text-sm text-muted-foreground">Subscription</span>
                 <span className="text-sm font-medium">{status}</span>
               </div>
               <Separator />
               <div className="flex items-center justify-between gap-4 p-4">
-                <span className="text-sm text-muted-foreground">Renews</span>
-                <span className="text-sm font-medium">
-                  {user.currentPeriodEnd?.toLocaleDateString() || "Not scheduled"}
-                </span>
+                <span className="text-sm text-muted-foreground">Billing source</span>
+                <span className="text-sm font-medium">{user.stripeCustomerId ? "Stripe portal" : "Pricing checkout"}</span>
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="gap-3">
             {user.stripeCustomerId ? (
               <form action="/api/stripe/portal" method="POST">
                 <Button type="submit">
@@ -126,47 +118,47 @@ export default async function DashboardBillingPage() {
                 Compare plans
               </Button>
             )}
-          </CardFooter>
-        </Card>
-
-        <Card className="rounded-[1.5rem]">
-          <CardHeader>
-            <CardTitle>Included features</CardTitle>
-            <CardDescription>What your workspace can use right now.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-col gap-3">
-              {plan.features.map((feature) => (
-                <div className="flex items-center gap-3 rounded-[1rem] border bg-muted/20 p-3" key={feature}>
-                  <CheckCircle2 className="size-4 text-muted-foreground" />
-                  <span className="text-sm">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button render={<Link href="/pricing" />} variant="secondary">
-              See all plans
+            <Button render={<Link href="/dashboard" />} variant="secondary">
+              Overview
             </Button>
           </CardFooter>
         </Card>
       </section>
 
-      <Card className="rounded-[1.5rem]" size="sm">
-        <CardHeader>
-          <div className="flex items-center gap-3">
-            <div className="flex size-9 items-center justify-center rounded-xl bg-muted">
+      <section className="grid gap-5 lg:grid-cols-[1fr_0.72fr]">
+        <Card className="rounded-[1.5rem]">
+          <CardHeader>
+            <CardTitle>Included right now</CardTitle>
+            <CardDescription>Features available on your current workspace plan.</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-3 md:grid-cols-2">
+            {plan.features.map((feature) => (
+              <div className="flex items-center gap-3 rounded-[1rem] border bg-muted/20 p-3" key={feature}>
+                <CheckCircle2 className="size-4 shrink-0 text-muted-foreground" />
+                <span className="text-sm">{feature}</span>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+
+        <Card className="rounded-[1.5rem]">
+          <CardHeader>
+            <div className="flex size-10 items-center justify-center rounded-xl bg-muted">
               <CreditCard className="size-4" />
             </div>
-            <div>
-              <CardTitle>Billing portal</CardTitle>
-              <CardDescription>
-                Stripe handles invoices, payment methods, subscription changes, and cancellation.
-              </CardDescription>
-            </div>
-          </div>
-        </CardHeader>
-      </Card>
+            <CardTitle>Invoices and payment methods</CardTitle>
+            <CardDescription>
+              Stripe handles invoices, card changes, subscription updates, and cancellation.
+            </CardDescription>
+          </CardHeader>
+          <CardFooter>
+            <Button className="w-full" render={<Link href="/pricing" />} variant="secondary">
+              See all plans
+              <ArrowUpRight data-icon="inline-end" />
+            </Button>
+          </CardFooter>
+        </Card>
+      </section>
     </div>
   );
 }

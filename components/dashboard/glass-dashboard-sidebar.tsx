@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, type ComponentType, type CSSProperties } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -166,8 +167,15 @@ export function DashboardGlassSidebar({ user }: DashboardGlassSidebarProps) {
             className="mb-2 flex w-full items-center justify-center gap-3 rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-ring/45"
             aria-label="Locality home"
           >
-            <div className="grid size-11 shrink-0 place-items-center rounded-[1rem] bg-foreground text-sm font-black text-background shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]">
-              L
+            <div className="grid size-11 shrink-0 place-items-center overflow-hidden rounded-[1rem] bg-white shadow-[0_8px_22px_rgba(15,23,42,0.16),inset_0_1px_0_rgba(255,255,255,0.9)]">
+              <Image
+                src="/logo.png"
+                alt=""
+                width={44}
+                height={44}
+                className="size-11 object-cover"
+                priority
+              />
             </div>
           </Link>
 

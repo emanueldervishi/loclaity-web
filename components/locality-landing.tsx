@@ -53,7 +53,16 @@ type LocalityLandingProps = {
 function Logo() {
   return (
     <Link className="logo" href="#top" aria-label="Locality home">
-      <span className="logo-mark"><Network size={15} /></span>
+      <span className="logo-image-tile">
+        <Image
+          src="/logo.png"
+          alt=""
+          width={30}
+          height={30}
+          className="logo-image"
+          priority
+        />
+      </span>
       <span>Locality</span>
     </Link>
   );

@@ -12,6 +12,8 @@ svg { flex:none; }
 .header-inner { width:min(1280px,100%); height:100%; margin:auto; padding:0 32px; display:flex; align-items:center; justify-content:space-between; }
 .logo { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600; letter-spacing:-.03em; }
 .logo-mark { display:grid; place-items:center; width:23px; height:23px; color:white; border-radius:6px; background:#050607; }
+.logo-image-tile { display:grid; place-items:center; width:23px; height:23px; overflow:hidden; border-radius:6px; background:#fff; box-shadow:0 0 0 1px rgb(10 10 10 / .08),0 4px 12px rgb(10 10 10 / .08); }
+.logo-image { width:100%; height:100%; object-fit:cover; }
 .nav { display:flex; align-items:center; gap:32px; font-size:13px; }
 .nav a { display:flex; align-items:center; gap:4px; color:#4c5056; transition:color .2s; }
 .nav a:hover { color:var(--fg); }
@@ -180,6 +182,21 @@ svg { flex:none; }
   border-radius:6px;
   background:#050607;
   box-shadow:none
+}
+:scope .logo-image-tile{
+  width:23px;
+  height:23px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border-radius:6px;
+  background:#fff;
+  box-shadow:0 0 0 1px rgb(10 10 10 / .08),0 4px 12px rgb(10 10 10 / .08)
+}
+:scope .logo-image{
+  width:100%;
+  height:100%;
+  object-fit:cover
 }
 :scope .nav{
   position:static;

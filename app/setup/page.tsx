@@ -92,7 +92,7 @@ export default async function SetupPage() {
                   <div className="flex items-start justify-between gap-4">
                     <div className={`grid size-10 place-items-center rounded-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] ${complete ? "bg-emerald-500/15" : "bg-muted"}`}>
                       {isTerminal ? (
-                        <Image src="/locality-terminal-icon.png" alt="" width={30} height={30} className="rounded-lg" />
+                        <Image src="/logo.png" alt="" width={30} height={30} className="rounded-lg bg-white object-cover" />
                       ) : Icon ? (
                         <Icon className={`size-5 ${complete ? "text-emerald-600 dark:text-emerald-300" : "text-primary"}`} />
                       ) : null}
