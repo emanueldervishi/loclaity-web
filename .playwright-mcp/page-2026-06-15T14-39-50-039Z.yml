@@ -1,0 +1,461 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Locality home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - text: Locality
+      - navigation "Landing page navigation" [ref=e13]:
+        - link "Product" [ref=e14] [cursor=pointer]:
+          - /url: "#product"
+        - link "How it works" [ref=e15] [cursor=pointer]:
+          - /url: "#workflow"
+        - link "Pricing" [ref=e16] [cursor=pointer]:
+          - /url: "#pricing"
+        - link "FAQ" [ref=e17] [cursor=pointer]:
+          - /url: "#faq"
+      - generic [ref=e18]:
+        - link "Sign in" [ref=e19] [cursor=pointer]:
+          - /url: /login
+        - link "Get Locality" [ref=e20] [cursor=pointer]:
+          - /url: /login
+          - text: Get Locality
+          - img [ref=e22]
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e28]:
+        - link "New Local memory for coding agents" [ref=e29] [cursor=pointer]:
+          - /url: "#product"
+          - generic [ref=e30]: New
+          - text: Local memory for coding agents
+          - img [ref=e31]
+        - heading "Your agents forget. Locality remembers." [level=1] [ref=e33]:
+          - text: Your agents forget.
+          - text: Locality remembers.
+        - paragraph [ref=e34]: Turn every coding session into structured, searchable project knowledge. Keep the commands, patches, decisions, and fixes that usually disappear.
+        - generic [ref=e35]:
+          - link "Start building memory" [ref=e36] [cursor=pointer]:
+            - /url: /login
+            - text: Start building memory
+            - img [ref=e38]
+          - link "See how it works" [ref=e40] [cursor=pointer]:
+            - /url: "#product"
+        - generic "Locality capabilities" [ref=e41]:
+          - generic [ref=e42]:
+            - img [ref=e43]
+            - text: Local-first
+          - generic [ref=e45]:
+            - img [ref=e46]
+            - text: Obsidian-native
+          - generic [ref=e48]:
+            - img [ref=e49]
+            - text: Free Codex importer
+          - generic [ref=e51]:
+            - img [ref=e52]
+            - text: Works with Ollama
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e63]:
+            - img [ref=e64]
+            - text: locality.app/memory
+          - generic [ref=e68]:
+            - img [ref=e69]
+            - text: Local only
+        - generic [ref=e72]:
+          - complementary [ref=e73]:
+            - generic [ref=e74]:
+              - img [ref=e75]
+              - text: locality
+            - generic [ref=e80]: Workspace
+            - button "Memory" [ref=e81] [cursor=pointer]:
+              - img [ref=e82]
+              - text: Memory
+            - button "Search" [ref=e86] [cursor=pointer]:
+              - img [ref=e87]
+              - text: Search
+            - button "Ask local AI" [ref=e90] [cursor=pointer]:
+              - img [ref=e91]
+              - text: Ask local AI
+            - generic [ref=e93]: Projects
+            - button "locality-web" [ref=e94] [cursor=pointer]:
+              - img [ref=e95]
+              - text: locality-web
+            - button "locality-cli" [ref=e99] [cursor=pointer]:
+              - img [ref=e100]
+              - text: locality-cli
+            - generic [ref=e104]:
+              - generic [ref=e105]: EM
+              - generic [ref=e106]:
+                - strong [ref=e107]: Emanuel
+                - generic [ref=e108]: Go plan
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - generic [ref=e111]:
+                - text: Project memory
+                - heading "locality-web" [level=2] [ref=e112]
+              - button "Search memory" [ref=e113] [cursor=pointer]:
+                - img [ref=e114]
+                - text: Search memory
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - generic [ref=e118]:
+                  - generic [ref=e119]: Recent sessions
+                  - generic [ref=e120]: 24 indexed
+                - article [ref=e121]:
+                  - img [ref=e123]
+                  - generic [ref=e126]:
+                    - strong [ref=e127]: Authentication repair
+                    - generic [ref=e128]: 7 files · 8 min ago
+                  - img [ref=e129]
+                - article [ref=e131]:
+                  - img [ref=e133]
+                  - generic [ref=e137]:
+                    - strong [ref=e138]: Stripe subscription flow
+                    - generic [ref=e139]: 4 decisions · Yesterday
+                  - img [ref=e140]
+                - article [ref=e142]:
+                  - img [ref=e144]
+                  - generic [ref=e148]:
+                    - strong [ref=e149]: Agent import architecture
+                    - generic [ref=e150]: 12 files · Jun 12
+                  - img [ref=e151]
+              - generic [ref=e153]:
+                - generic [ref=e154]:
+                  - generic [ref=e155]:
+                    - text: Resolved session
+                    - heading "Authentication repair" [level=3] [ref=e156]
+                  - generic [ref=e157]: indexed
+                - generic [ref=e158]:
+                  - generic [ref=e159]:
+                    - img [ref=e160]
+                    - text: 18 minutes
+                  - generic [ref=e163]:
+                    - img [ref=e164]
+                    - text: 7 files changed
+                  - generic [ref=e169]:
+                    - img [ref=e170]
+                    - text: Codex
+                - generic [ref=e173]:
+                  - generic [ref=e174]:
+                    - generic [ref=e175]: auth.ts
+                    - generic [ref=e176]: +18 −6
+                  - code [ref=e177]:
+                    - emphasis [ref=e178]: "+ callback: {"
+                    - emphasis [ref=e179]: "+ session({ session, user }) {"
+                    - emphasis [ref=e180]: + session.user.id = user.id
+                    - emphasis [ref=e181]: + return session
+                    - emphasis [ref=e182]: "+ }"
+                    - emphasis [ref=e183]: "+ }"
+                - generic [ref=e184]:
+                  - img [ref=e186]
+                  - generic [ref=e188]:
+                    - strong [ref=e189]: Decision captured
+                    - paragraph [ref=e190]: Use the database session strategy so CLI authorization and web sessions share one identity source.
+    - generic [ref=e191]:
+      - paragraph [ref=e192]: One memory layer across the tools you already use
+      - generic [ref=e194]:
+        - generic [ref=e195]: Codex
+        - generic [ref=e197]: Claude Code
+        - generic [ref=e199]: Cursor
+        - generic [ref=e201]: GitHub Copilot
+        - generic [ref=e203]: Gemini CLI
+        - generic [ref=e205]: Ollama
+        - generic [ref=e207]: Codex
+        - generic [ref=e209]: Claude Code
+        - generic [ref=e211]: Cursor
+        - generic [ref=e213]: GitHub Copilot
+        - generic [ref=e215]: Gemini CLI
+        - generic [ref=e217]: Ollama
+    - generic [ref=e220]:
+      - generic [ref=e221]: Built for agent-heavy work
+      - heading "Keep the useful parts of every session." [level=2] [ref=e222]
+      - paragraph [ref=e223]: Locality turns noisy terminal history into durable project context you can browse, link, and question later.
+    - generic [ref=e225]:
+      - generic [ref=e226]:
+        - generic [ref=e227]: "01"
+        - heading "Capture the work without changing how you work." [level=2] [ref=e228]
+        - paragraph [ref=e229]: Import complete agent sessions from your machine. Locality identifies projects, commands, errors, patches, and outcomes automatically.
+        - list [ref=e230]:
+          - listitem [ref=e231]:
+            - img [ref=e232]
+            - text: Detect supported coding agents
+          - listitem [ref=e234]:
+            - img [ref=e235]
+            - text: Choose exactly what gets imported
+          - listitem [ref=e237]:
+            - img [ref=e238]
+            - text: Preserve complete commands and diffs
+        - link "Start importing" [ref=e240] [cursor=pointer]:
+          - /url: /login
+          - text: Start importing
+          - img [ref=e241]
+      - generic [ref=e243]:
+        - generic [ref=e244]:
+          - generic [ref=e245]:
+            - generic [ref=e246]:
+              - img [ref=e247]
+              - text: locality setup
+            - generic [ref=e250]: powershell
+          - generic [ref=e251]:
+            - paragraph [ref=e252]: PS C:\projects\locality> locality import
+            - paragraph [ref=e253]: Scanning supported agent history...
+            - paragraph [ref=e254]: ✓ Codex 24 sessions found
+            - paragraph [ref=e255]: ✓ Project detected locality-web
+            - paragraph [ref=e256]: ✓ Structured 312 turns · 86 files
+            - paragraph [ref=e259]: Memory written to Obsidian.
+        - generic [ref=e260]:
+          - img [ref=e261]
+          - generic [ref=e270]:
+            - strong [ref=e271]: Private by default
+            - generic [ref=e272]: Raw history never leaves your machine
+    - generic [ref=e274]:
+      - generic [ref=e275]:
+        - generic [ref=e276]: "02"
+        - heading "Find the fix you already figured out." [level=2] [ref=e277]
+        - paragraph [ref=e278]: Search across decisions, changed files, failed attempts, and final outcomes. Project context stays connected instead of being buried in chat logs.
+        - list [ref=e279]:
+          - listitem [ref=e280]:
+            - img [ref=e281]
+            - text: Search by concept, file, or command
+          - listitem [ref=e283]:
+            - img [ref=e284]
+            - text: Follow links between related sessions
+          - listitem [ref=e286]:
+            - img [ref=e287]
+            - text: Read everything as portable Markdown
+        - link "Explore Local AI" [ref=e289] [cursor=pointer]:
+          - /url: /ai
+          - text: Explore Local AI
+          - img [ref=e290]
+      - generic [ref=e292]:
+        - generic [ref=e293]:
+          - img [ref=e294]
+          - generic [ref=e297]: How did we fix OAuth session IDs?
+          - generic [ref=e298]: ⌘ K
+        - generic [ref=e299]:
+          - article [ref=e300]:
+            - img [ref=e302]
+            - generic [ref=e305]:
+              - strong [ref=e306]: Authentication repair
+              - paragraph [ref=e307]: Added the user ID to the Auth.js session callback...
+              - text: auth.ts · 8 minutes ago
+          - article [ref=e308]:
+            - img [ref=e310]
+            - generic [ref=e315]:
+              - strong [ref=e316]: CLI approval route
+              - paragraph [ref=e317]: Connected browser authorization to the signed-in user...
+              - text: route.ts · Jun 13
+          - article [ref=e318]:
+            - img [ref=e320]
+            - generic [ref=e324]:
+              - strong [ref=e325]: Prisma account model
+              - paragraph [ref=e326]: Kept OAuth accounts and API tokens under one user...
+              - text: schema.prisma · Jun 11
+    - generic [ref=e328]:
+      - generic [ref=e329]:
+        - generic [ref=e330]: "03"
+        - heading "Ask your project history, not the internet." [level=2] [ref=e331]
+        - paragraph [ref=e332]: Use a local model to answer questions from the work your agents actually completed. The browser talks only to Locality on your computer.
+        - list [ref=e333]:
+          - listitem [ref=e334]:
+            - img [ref=e335]
+            - text: Loopback-only local bridge
+          - listitem [ref=e337]:
+            - img [ref=e338]
+            - text: Ollama-powered answers
+          - listitem [ref=e340]:
+            - img [ref=e341]
+            - text: Sources linked to original notes
+        - link "Open Local AI" [ref=e343] [cursor=pointer]:
+          - /url: /ai
+          - text: Open Local AI
+          - img [ref=e344]
+      - generic [ref=e346]:
+        - generic [ref=e347]:
+          - generic [ref=e348]: Local AI
+          - generic [ref=e350]: qwen2.5-coder:7b
+        - generic [ref=e351]:
+          - generic [ref=e352]: Why did we choose database sessions?
+          - generic [ref=e353]:
+            - img [ref=e355]
+            - paragraph [ref=e357]: You chose database sessions so web authentication and CLI device approval resolve to the same user record. This also made token revocation and plan checks consistent.
+          - generic [ref=e358]:
+            - generic [ref=e359]: 3 sources
+            - generic [ref=e360]: auth.ts
+            - generic [ref=e361]: device/approve
+        - generic [ref=e362]:
+          - text: Ask about this project...
+          - img [ref=e364]
+    - generic [ref=e367]:
+      - generic [ref=e368]:
+        - generic [ref=e369]: Three steps, then it stays current
+        - heading "Setup. Import. Remember." [level=2] [ref=e370]
+        - paragraph [ref=e371]: Locality fits around the tools you already use. No new editor, proprietary file format, or cloud knowledge base.
+      - generic [ref=e372]:
+        - article [ref=e373]:
+          - text: "01"
+          - img [ref=e375]
+          - heading "Install the CLI" [level=3] [ref=e378]
+          - paragraph [ref=e379]: Connect your Locality account and select an Obsidian vault.
+          - code [ref=e380]: locality setup
+        - article [ref=e381]:
+          - text: "02"
+          - img [ref=e383]
+          - heading "Choose your history" [level=3] [ref=e387]
+          - paragraph [ref=e388]: Review detected agents and import only the projects you want.
+          - code [ref=e389]: locality import
+        - article [ref=e390]:
+          - text: "03"
+          - img [ref=e392]
+          - heading "Use your memory" [level=3] [ref=e394]
+          - paragraph [ref=e395]: Browse in Obsidian or ask a local model from the web dashboard.
+          - code [ref=e396]: locality web
+    - generic [ref=e398]:
+      - generic [ref=e399]:
+        - strong [ref=e400]: 100%
+        - generic [ref=e401]: local raw history
+      - generic [ref=e402]:
+        - strong [ref=e403]: "0"
+        - generic [ref=e404]: proprietary note formats
+      - generic [ref=e405]:
+        - strong [ref=e406]: "1"
+        - generic [ref=e407]: memory across every agent
+      - generic [ref=e408]:
+        - strong [ref=e409]: 24/7
+        - generic [ref=e410]: searchable project context
+    - generic [ref=e412]:
+      - generic [ref=e413]:
+        - generic [ref=e414]: Simple monthly plans
+        - heading "Start free. Upgrade when memory becomes a habit." [level=2] [ref=e415]
+        - paragraph [ref=e416]: The Codex importer is free. Paid plans unlock broader, automatic project memory.
+      - generic [ref=e417]:
+        - article [ref=e418]:
+          - heading "Free" [level=3] [ref=e419]
+          - generic [ref=e420]: $0 forever
+          - paragraph [ref=e421]: A permanent local memory for your newest Codex work.
+          - list [ref=e422]:
+            - listitem [ref=e423]:
+              - img [ref=e424]
+              - generic [ref=e426]: Latest 10 agent chats
+            - listitem [ref=e427]:
+              - img [ref=e428]
+              - generic [ref=e430]: Up to 50 turns per chat
+            - listitem [ref=e431]:
+              - img [ref=e432]
+              - generic [ref=e434]: Codex importer
+            - listitem [ref=e435]:
+              - img [ref=e436]
+              - generic [ref=e438]: Manual imports
+            - listitem [ref=e439]:
+              - img [ref=e440]
+              - generic [ref=e442]: Local Obsidian notes
+          - generic [ref=e443]: Current plan
+        - article [ref=e444]:
+          - generic [ref=e445]: Most useful
+          - heading "Go" [level=3] [ref=e446]
+          - generic [ref=e447]: $9 / month
+          - paragraph [ref=e448]: For developers using agents every day.
+          - list [ref=e449]:
+            - listitem [ref=e450]:
+              - img [ref=e451]
+              - generic [ref=e453]: Unlimited history
+            - listitem [ref=e454]:
+              - img [ref=e455]
+              - generic [ref=e457]: Codex, Claude Code, Cursor and Copilot
+            - listitem [ref=e458]:
+              - img [ref=e459]
+              - generic [ref=e461]: Automatic imports
+            - listitem [ref=e462]:
+              - img [ref=e463]
+              - generic [ref=e465]: Web and Obsidian Local AI chat
+            - listitem [ref=e466]:
+              - img [ref=e467]
+              - generic [ref=e469]: Ollama, OpenAI and Claude
+          - link "Start with Go" [ref=e470] [cursor=pointer]:
+            - /url: /login
+        - article [ref=e471]:
+          - heading "Plus" [level=3] [ref=e472]
+          - generic [ref=e473]: $19 / month
+          - paragraph [ref=e474]: A connected memory layer across your whole setup.
+          - list [ref=e475]:
+            - listitem [ref=e476]:
+              - img [ref=e477]
+              - generic [ref=e479]: Everything in Go
+            - listitem [ref=e480]:
+              - img [ref=e481]
+              - generic [ref=e483]: Multiple devices and vaults
+            - listitem [ref=e484]:
+              - img [ref=e485]
+              - generic [ref=e487]: Advanced semantic indexing
+            - listitem [ref=e488]:
+              - img [ref=e489]
+              - generic [ref=e491]: Team-ready export
+            - listitem [ref=e492]:
+              - img [ref=e493]
+              - generic [ref=e495]: Priority releases
+          - link "Start with Plus" [ref=e496] [cursor=pointer]:
+            - /url: /login
+    - generic [ref=e498]:
+      - generic [ref=e499]:
+        - generic [ref=e500]: Questions, answered
+        - heading "Built to stay under your control." [level=2] [ref=e501]
+        - paragraph [ref=e502]: Locality keeps the valuable context from agent work without turning your private development history into another cloud dataset.
+      - generic [ref=e503]:
+        - group [ref=e504]:
+          - generic "Does Locality upload my code or agent history? +" [ref=e505] [cursor=pointer]:
+            - text: Does Locality upload my code or agent history?
+            - generic [ref=e506]: +
+          - paragraph [ref=e507]: No. Imports, indexing, and your raw session history stay on your computer. The web account only handles identity, billing, and plan access.
+        - group [ref=e508]:
+          - generic "Which coding agents are supported? +" [ref=e509] [cursor=pointer]:
+            - text: Which coding agents are supported?
+            - generic [ref=e510]: +
+        - group [ref=e511]:
+          - generic "Where does the memory live? +" [ref=e512] [cursor=pointer]:
+            - text: Where does the memory live?
+            - generic [ref=e513]: +
+        - group [ref=e514]:
+          - generic "Can I ask questions about old sessions? +" [ref=e515] [cursor=pointer]:
+            - text: Can I ask questions about old sessions?
+            - generic [ref=e516]: +
+    - generic [ref=e519]:
+      - generic [ref=e520]: Your project already has a history
+      - heading "Make sure your next agent can use it." [level=2] [ref=e521]
+      - paragraph [ref=e522]: Build a private, durable memory from the work you are already doing.
+      - link "Get Locality free" [ref=e523] [cursor=pointer]:
+        - /url: /login
+        - text: Get Locality free
+        - img [ref=e525]
+  - contentinfo [ref=e527]:
+    - generic [ref=e528]:
+      - generic [ref=e529]:
+        - generic [ref=e530]:
+          - img [ref=e532]
+          - text: Locality
+        - paragraph [ref=e537]: Local memory for coding agents.
+      - generic [ref=e538]:
+        - strong [ref=e539]: Product
+        - link "Features" [ref=e540] [cursor=pointer]:
+          - /url: "#product"
+        - link "Pricing" [ref=e541] [cursor=pointer]:
+          - /url: /pricing
+        - link "Local AI" [ref=e542] [cursor=pointer]:
+          - /url: /ai
+      - generic [ref=e543]:
+        - strong [ref=e544]: Account
+        - link "Sign in" [ref=e545] [cursor=pointer]:
+          - /url: /login
+        - link "Dashboard" [ref=e546] [cursor=pointer]:
+          - /url: /dashboard
+        - link "Activate CLI" [ref=e547] [cursor=pointer]:
+          - /url: /activate
+      - generic [ref=e548]:
+        - strong [ref=e549]: Legal
+        - link "Privacy" [ref=e550] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=e551] [cursor=pointer]:
+          - /url: /terms
+    - generic [ref=e552]:
+      - generic [ref=e553]: © 2026 Locality
+      - generic [ref=e554]: Built for work worth remembering.

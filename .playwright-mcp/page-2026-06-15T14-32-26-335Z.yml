@@ -1,0 +1,823 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+      - navigation "Main" [ref=e19]:
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - button "Products" [ref=e23]:
+              - text: Products
+              - img [ref=e24]
+          - listitem [ref=e26]:
+            - link "features" [ref=e27] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e28]:
+            - link "pricing" [ref=e29] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e30]:
+            - link "Docs" [ref=e31] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e32]:
+            - link "Company" [ref=e33] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e34]:
+        - button "Toggle theme" [ref=e35] [cursor=pointer]:
+          - img
+          - generic [ref=e36]: Toggle theme
+        - button "Get Started" [ref=e37]
+  - main [ref=e38]:
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - img [ref=e53]
+        - generic [ref=e57]: Introducing intelligent code generation
+      - heading "Ship production code 10x faster with AI" [level=1] [ref=e58]
+      - paragraph [ref=e59]: Your AI coding partner writes, reviews, and refactors code instantly. Build features in minutes, not hours.
+      - link "Start for free" [ref=e60] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - button "Code Generation" [ref=e64] [cursor=pointer]: Code Generation
+        - button "Smart Review" [ref=e67] [cursor=pointer]
+        - button "Auto Testing" [ref=e68] [cursor=pointer]
+        - button "Deploy Ready" [ref=e69] [cursor=pointer]
+      - img "Code Generation" [ref=e71]
+    - generic [ref=e73]:
+      - paragraph [ref=e74]:
+        - text: Trusted by
+        - generic [ref=e75]: fast-growing
+        - text: startups
+      - generic [ref=e76]:
+        - img [ref=e79]
+        - img [ref=e89]
+        - img [ref=e101]
+        - img [ref=e105]
+        - img [ref=e109]
+        - img [ref=e117]
+        - img [ref=e130]
+        - img [ref=e142]
+    - generic [ref=e144]:
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - img [ref=e150]
+          - generic [ref=e152]: Scale
+        - generic [ref=e153]:
+          - heading "Your AI partner for every commit" [level=2] [ref=e154]
+          - paragraph [ref=e155]: CodeForge writes boilerplate, refactors legacy code, and reviews every line so you can focus on architecture and innovation
+      - generic [ref=e157]:
+        - generic [ref=e158]:
+          - heading "AI meets your workflow in seconds" [level=3] [ref=e159]
+          - paragraph [ref=e160]: Start coding with AI by cloning any GitHub repository. Review smart suggestions and apply code changes with a single click.
+          - button "Learn More" [ref=e161]:
+            - text: Learn More
+            - img
+        - generic [ref=e179]:
+          - generic [ref=e180]:
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - generic [ref=e192]: $
+                - generic [ref=e193]: npx codeforge clone repo
+              - generic [ref=e194]: Cloning repository...
+              - generic [ref=e195]: "Resolving deltas: 100% (1234/1234), done."
+              - generic [ref=e196]: Analyzing codebase...
+              - generic [ref=e197]: Setting up AI agent...
+              - generic [ref=e198]: ✓ Repository cloned successfully
+            - generic [ref=e199]:
+              - paragraph [ref=e200]:
+                - img [ref=e201]
+                - text: Clone and activate your AI agent
+              - paragraph [ref=e203]: Connect any GitHub repository instantly. Your AI agent analyzes your codebase and starts suggesting improvements right away.
+          - generic [ref=e204]:
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - generic [ref=e222]: utils.ts
+                - generic [ref=e224]:
+                  - generic [ref=e226]: "import { useState, useEffect } from 'react';"
+                  - generic [ref=e228]: "import { cn } from '@/lib/utils';"
+                  - generic [ref=e230]: "export function useCounter() {"
+                  - generic [ref=e231]:
+                    - generic [ref=e233]: "- const [count, setCount] = useState(0);"
+                    - generic [ref=e235]: "- useEffect(() => {"
+                    - generic [ref=e237]: "- console.log(count);"
+                    - generic [ref=e239]: "- }, [count]);"
+                  - generic [ref=e240]:
+                    - generic [ref=e242]: + const [count, setCount] = useState(0);
+                    - generic [ref=e244]: +
+                    - generic [ref=e246]: "+ useEffect(() => {"
+                    - generic [ref=e248]: + console.log('Count changed:', count);
+                    - generic [ref=e250]: "+ }, [count]);"
+                  - generic [ref=e252]: "return { count, setCount };"
+                  - generic [ref=e254]: "}"
+              - button "Apply suggestion" [ref=e255]
+            - generic [ref=e256]:
+              - paragraph [ref=e257]:
+                - img [ref=e258]
+                - text: Review and apply AI suggestions
+              - paragraph [ref=e260]: Get instant code suggestions with visual diffs. Apply changes with a single click to improve your codebase.
+    - generic [ref=e267]:
+      - generic [ref=e268]:
+        - heading "Connect tools. Run agents. Build anything." [level=3] [ref=e269]
+        - paragraph [ref=e270]: Choose from hundreds of MCP servers to extend capabilities. Run multiple AI agents in parallel to complete complex tasks faster.
+        - link "Learn More" [ref=e271] [cursor=pointer]:
+          - /url: "#"
+          - text: Learn More
+          - img
+      - generic [ref=e289]:
+        - generic [ref=e290]:
+          - generic [ref=e292]:
+            - paragraph [ref=e293]: Plan, search
+            - generic [ref=e294]:
+              - generic [ref=e295]:
+                - button [ref=e296]:
+                  - img [ref=e297]
+                - button [ref=e298]:
+                  - img [ref=e299]
+                - button "Sources" [ref=e303]:
+                  - img [ref=e304]
+                  - generic [ref=e305]: Sources
+              - button [ref=e306]:
+                - img
+          - generic [ref=e307]:
+            - paragraph [ref=e308]:
+              - img [ref=e309]
+              - text: Install MCP servers with one click
+            - paragraph [ref=e311]: Search and install MCP servers instantly. Extend your agent's capabilities with seamless integrations for any tool.
+        - generic [ref=e323]:
+          - paragraph [ref=e324]:
+            - img [ref=e325]
+            - text: Run multiple agents in parallel
+          - paragraph [ref=e327]: Launch parallel agents for different roles. Monitor token usage and progress as each agent completes its steps.
+    - generic [ref=e328]:
+      - generic [ref=e331]:
+        - generic [ref=e332]:
+          - img [ref=e334]
+          - generic [ref=e336]: Scale
+        - generic [ref=e337]:
+          - heading "Stop writing boilerplate. Start building features." [level=2] [ref=e338]
+          - paragraph [ref=e339]: Your AI agent handles repetitive coding tasks, reviews every commit, and catches bugs before deployment. Spend time on architecture, not syntax.
+      - generic [ref=e345]:
+        - generic [ref=e346]:
+          - heading "Built for teams scaling at warp speed" [level=3] [ref=e347]
+          - paragraph [ref=e348]: From solo developers to 100+ person engineering teams. Trusted by companies that need to ship fast and stay lean.
+          - button "Learn More" [ref=e349]:
+            - text: Learn More
+            - img
+        - generic [ref=e351]:
+          - generic [ref=e352]:
+            - generic [ref=e353]:
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+            - generic [ref=e396]:
+              - paragraph [ref=e397]:
+                - img [ref=e398]
+                - text: Used by teams at innovative companies
+              - paragraph [ref=e400]: Trusted by engineering teams at rapidly growing startups. Write production code 10x faster while maintaining quality and standards.
+          - generic [ref=e401]:
+            - img [ref=e404]
+            - generic [ref=e2253]:
+              - paragraph [ref=e2254]:
+                - img [ref=e2255]
+                - text: Active in 120+ countries worldwide
+              - paragraph [ref=e2257]: Developers choose our AI agents to accelerate development. Join the global movement toward intelligent coding.
+    - generic [ref=e2258]:
+      - generic [ref=e2261]:
+        - generic [ref=e2262]:
+          - img [ref=e2264]
+          - generic [ref=e2266]: Scale
+        - generic [ref=e2267]:
+          - heading "Setup. Connect. Build.Ship." [level=2] [ref=e2268]
+          - paragraph [ref=e2269]: Collaborate seamlessly with your team using AI-powered tools
+      - generic [ref=e2270]:
+        - generic [ref=e2273]:
+          - paragraph [ref=e2274]: Plan, search
+          - generic [ref=e2275]:
+            - generic [ref=e2276]:
+              - button [ref=e2277]:
+                - img [ref=e2278]
+              - button [ref=e2279]:
+                - img [ref=e2280]
+              - button "Sources" [ref=e2284]:
+                - img [ref=e2285]
+                - generic [ref=e2286]: Sources
+            - button [ref=e2287]:
+              - img
+        - generic [ref=e2290]:
+          - generic [ref=e2291]:
+            - heading "Connect your GitHub or repository" [level=3] [ref=e2292]
+            - paragraph [ref=e2293]: Sign in with GitHub or clone any repository to activate your AI agent. Instant setup with zero configuration required.
+          - generic [ref=e2294]:
+            - heading "Choose your integrations and tools" [level=3] [ref=e2295]
+            - paragraph [ref=e2296]: Add design tools, frameworks, databases, and APIs to extend your agent's capabilities. Everything connects seamlessly to your workflow..
+          - generic [ref=e2297]:
+            - heading "Start building with AI assistance" [level=3] [ref=e2298]
+            - paragraph [ref=e2299]: Ask your agent to write features, review code, or fix bugs in plain English. Get intelligent suggestions with context from your entire codebase..
+    - generic [ref=e2300]:
+      - generic [ref=e2303]:
+        - generic [ref=e2304]:
+          - img [ref=e2306]
+          - generic [ref=e2309]: Scale
+        - generic [ref=e2310]:
+          - heading "Hear from our developer community" [level=2] [ref=e2311]
+          - paragraph [ref=e2312]: Thousands of engineers trust our AI agents daily. Discover how teams accelerate development while maintaining code quality and standards.
+      - generic [ref=e2314]:
+        - generic [ref=e2315]:
+          - generic [ref=e2316]:
+            - generic [ref=e2317] [cursor=pointer]:
+              - paragraph [ref=e2319]: "The AI-driven analytics from #QuantumInsights have revolutionized our product development cycle. Insights are now more accurate and faster than ever. A game-changer for tech companies."
+              - generic [ref=e2320]:
+                - img "Alex Rivera" [ref=e2321]
+                - generic [ref=e2322]:
+                  - paragraph [ref=e2323]: Alex Rivera
+                  - paragraph [ref=e2324]: CTO at InnovateTech
+            - generic [ref=e2325] [cursor=pointer]:
+              - paragraph [ref=e2327]: "Implementing #AIStream's customer prediction model has drastically improved our targeting strategy. Seeing a 50% increase in conversion rates! Highly recommend their solutions."
+              - generic [ref=e2328]:
+                - img "Samantha Lee" [ref=e2329]
+                - generic [ref=e2330]:
+                  - paragraph [ref=e2331]: Samantha Lee
+                  - paragraph [ref=e2332]: Marketing Director at NextGen Solutions
+            - generic [ref=e2333] [cursor=pointer]:
+              - paragraph [ref=e2335]: "As a startup, we need to move fast and stay ahead. #CodeAI's automated coding assistant helps us do just that. Our development speed has doubled. tool for any startup."
+              - generic [ref=e2336]:
+                - img "Raj Patel" [ref=e2337]
+                - generic [ref=e2338]:
+                  - paragraph [ref=e2339]: Raj Patel
+                  - paragraph [ref=e2340]: Founder & CEO at StartUp Grid
+            - generic [ref=e2341] [cursor=pointer]:
+              - paragraph [ref=e2343]: "#VoiceGen's AI-driven voice synthesis has made creating global products a breeze. Localization is now seamless and efficient. must-have for global product teams."
+              - generic [ref=e2344]:
+                - img "Emily Chen" [ref=e2345]
+                - generic [ref=e2346]:
+                  - paragraph [ref=e2347]: Emily Chen
+                  - paragraph [ref=e2348]: Product Manager at Digital Wave
+            - generic [ref=e2349] [cursor=pointer]:
+              - paragraph [ref=e2351]: "Leveraging #DataCrunch's AI for our financial models has given us an edge in predictive accuracy. Our investment strategies are now powered by real-time data analytics. Transformative for the finance industry."
+              - generic [ref=e2352]:
+                - img "Michael Brown" [ref=e2353]
+                - generic [ref=e2354]:
+                  - paragraph [ref=e2355]: Michael Brown
+                  - paragraph [ref=e2356]: Data Scientist at FinTech Innovations
+            - generic [ref=e2357] [cursor=pointer]:
+              - paragraph [ref=e2359]: "#LogiTech's supply chain optimization tools have drastically reduced our operational costs.Efficiency and accuracy in logistics have never been better."
+              - generic [ref=e2360]:
+                - img "Linda Wu" [ref=e2361]
+                - generic [ref=e2362]:
+                  - paragraph [ref=e2363]: Linda Wu
+                  - paragraph [ref=e2364]: VP of Operations at LogiChain Solutions
+            - generic [ref=e2365] [cursor=pointer]:
+              - paragraph [ref=e2367]: "By integrating #GreenTech's sustainable energy solutions, we've seen a significant reduction in carbon footprint.Leading the way in eco-friendly business practices. Pioneering change in the industry."
+              - generic [ref=e2368]:
+                - img "Carlos Gomez" [ref=e2369]
+                - generic [ref=e2370]:
+                  - paragraph [ref=e2371]: Carlos Gomez
+                  - paragraph [ref=e2372]: Head of R&D at EcoInnovate
+          - generic [ref=e2373]:
+            - generic [ref=e2374] [cursor=pointer]:
+              - paragraph [ref=e2376]: "The AI-driven analytics from #QuantumInsights have revolutionized our product development cycle. Insights are now more accurate and faster than ever. A game-changer for tech companies."
+              - generic [ref=e2377]:
+                - img "Alex Rivera" [ref=e2378]
+                - generic [ref=e2379]:
+                  - paragraph [ref=e2380]: Alex Rivera
+                  - paragraph [ref=e2381]: CTO at InnovateTech
+            - generic [ref=e2382] [cursor=pointer]:
+              - paragraph [ref=e2384]: "Implementing #AIStream's customer prediction model has drastically improved our targeting strategy. Seeing a 50% increase in conversion rates! Highly recommend their solutions."
+              - generic [ref=e2385]:
+                - img "Samantha Lee" [ref=e2386]
+                - generic [ref=e2387]:
+                  - paragraph [ref=e2388]: Samantha Lee
+                  - paragraph [ref=e2389]: Marketing Director at NextGen Solutions
+            - generic [ref=e2390] [cursor=pointer]:
+              - paragraph [ref=e2392]: "As a startup, we need to move fast and stay ahead. #CodeAI's automated coding assistant helps us do just that. Our development speed has doubled. tool for any startup."
+              - generic [ref=e2393]:
+                - img "Raj Patel" [ref=e2394]
+                - generic [ref=e2395]:
+                  - paragraph [ref=e2396]: Raj Patel
+                  - paragraph [ref=e2397]: Founder & CEO at StartUp Grid
+            - generic [ref=e2398] [cursor=pointer]:
+              - paragraph [ref=e2400]: "#VoiceGen's AI-driven voice synthesis has made creating global products a breeze. Localization is now seamless and efficient. must-have for global product teams."
+              - generic [ref=e2401]:
+                - img "Emily Chen" [ref=e2402]
+                - generic [ref=e2403]:
+                  - paragraph [ref=e2404]: Emily Chen
+                  - paragraph [ref=e2405]: Product Manager at Digital Wave
+            - generic [ref=e2406] [cursor=pointer]:
+              - paragraph [ref=e2408]: "Leveraging #DataCrunch's AI for our financial models has given us an edge in predictive accuracy. Our investment strategies are now powered by real-time data analytics. Transformative for the finance industry."
+              - generic [ref=e2409]:
+                - img "Michael Brown" [ref=e2410]
+                - generic [ref=e2411]:
+                  - paragraph [ref=e2412]: Michael Brown
+                  - paragraph [ref=e2413]: Data Scientist at FinTech Innovations
+            - generic [ref=e2414] [cursor=pointer]:
+              - paragraph [ref=e2416]: "#LogiTech's supply chain optimization tools have drastically reduced our operational costs.Efficiency and accuracy in logistics have never been better."
+              - generic [ref=e2417]:
+                - img "Linda Wu" [ref=e2418]
+                - generic [ref=e2419]:
+                  - paragraph [ref=e2420]: Linda Wu
+                  - paragraph [ref=e2421]: VP of Operations at LogiChain Solutions
+            - generic [ref=e2422] [cursor=pointer]:
+              - paragraph [ref=e2424]: "By integrating #GreenTech's sustainable energy solutions, we've seen a significant reduction in carbon footprint.Leading the way in eco-friendly business practices. Pioneering change in the industry."
+              - generic [ref=e2425]:
+                - img "Carlos Gomez" [ref=e2426]
+                - generic [ref=e2427]:
+                  - paragraph [ref=e2428]: Carlos Gomez
+                  - paragraph [ref=e2429]: Head of R&D at EcoInnovate
+          - generic [ref=e2430]:
+            - generic [ref=e2431] [cursor=pointer]:
+              - paragraph [ref=e2433]: "The AI-driven analytics from #QuantumInsights have revolutionized our product development cycle. Insights are now more accurate and faster than ever. A game-changer for tech companies."
+              - generic [ref=e2434]:
+                - img "Alex Rivera" [ref=e2435]
+                - generic [ref=e2436]:
+                  - paragraph [ref=e2437]: Alex Rivera
+                  - paragraph [ref=e2438]: CTO at InnovateTech
+            - generic [ref=e2439] [cursor=pointer]:
+              - paragraph [ref=e2441]: "Implementing #AIStream's customer prediction model has drastically improved our targeting strategy. Seeing a 50% increase in conversion rates! Highly recommend their solutions."
+              - generic [ref=e2442]:
+                - img "Samantha Lee" [ref=e2443]
+                - generic [ref=e2444]:
+                  - paragraph [ref=e2445]: Samantha Lee
+                  - paragraph [ref=e2446]: Marketing Director at NextGen Solutions
+            - generic [ref=e2447] [cursor=pointer]:
+              - paragraph [ref=e2449]: "As a startup, we need to move fast and stay ahead. #CodeAI's automated coding assistant helps us do just that. Our development speed has doubled. tool for any startup."
+              - generic [ref=e2450]:
+                - img "Raj Patel" [ref=e2451]
+                - generic [ref=e2452]:
+                  - paragraph [ref=e2453]: Raj Patel
+                  - paragraph [ref=e2454]: Founder & CEO at StartUp Grid
+            - generic [ref=e2455] [cursor=pointer]:
+              - paragraph [ref=e2457]: "#VoiceGen's AI-driven voice synthesis has made creating global products a breeze. Localization is now seamless and efficient. must-have for global product teams."
+              - generic [ref=e2458]:
+                - img "Emily Chen" [ref=e2459]
+                - generic [ref=e2460]:
+                  - paragraph [ref=e2461]: Emily Chen
+                  - paragraph [ref=e2462]: Product Manager at Digital Wave
+            - generic [ref=e2463] [cursor=pointer]:
+              - paragraph [ref=e2465]: "Leveraging #DataCrunch's AI for our financial models has given us an edge in predictive accuracy. Our investment strategies are now powered by real-time data analytics. Transformative for the finance industry."
+              - generic [ref=e2466]:
+                - img "Michael Brown" [ref=e2467]
+                - generic [ref=e2468]:
+                  - paragraph [ref=e2469]: Michael Brown
+                  - paragraph [ref=e2470]: Data Scientist at FinTech Innovations
+            - generic [ref=e2471] [cursor=pointer]:
+              - paragraph [ref=e2473]: "#LogiTech's supply chain optimization tools have drastically reduced our operational costs.Efficiency and accuracy in logistics have never been better."
+              - generic [ref=e2474]:
+                - img "Linda Wu" [ref=e2475]
+                - generic [ref=e2476]:
+                  - paragraph [ref=e2477]: Linda Wu
+                  - paragraph [ref=e2478]: VP of Operations at LogiChain Solutions
+            - generic [ref=e2479] [cursor=pointer]:
+              - paragraph [ref=e2481]: "By integrating #GreenTech's sustainable energy solutions, we've seen a significant reduction in carbon footprint.Leading the way in eco-friendly business practices. Pioneering change in the industry."
+              - generic [ref=e2482]:
+                - img "Carlos Gomez" [ref=e2483]
+                - generic [ref=e2484]:
+                  - paragraph [ref=e2485]: Carlos Gomez
+                  - paragraph [ref=e2486]: Head of R&D at EcoInnovate
+          - generic [ref=e2487]:
+            - generic [ref=e2488] [cursor=pointer]:
+              - paragraph [ref=e2490]: "The AI-driven analytics from #QuantumInsights have revolutionized our product development cycle. Insights are now more accurate and faster than ever. A game-changer for tech companies."
+              - generic [ref=e2491]:
+                - img "Alex Rivera" [ref=e2492]
+                - generic [ref=e2493]:
+                  - paragraph [ref=e2494]: Alex Rivera
+                  - paragraph [ref=e2495]: CTO at InnovateTech
+            - generic [ref=e2496] [cursor=pointer]:
+              - paragraph [ref=e2498]: "Implementing #AIStream's customer prediction model has drastically improved our targeting strategy. Seeing a 50% increase in conversion rates! Highly recommend their solutions."
+              - generic [ref=e2499]:
+                - img "Samantha Lee" [ref=e2500]
+                - generic [ref=e2501]:
+                  - paragraph [ref=e2502]: Samantha Lee
+                  - paragraph [ref=e2503]: Marketing Director at NextGen Solutions
+            - generic [ref=e2504] [cursor=pointer]:
+              - paragraph [ref=e2506]: "As a startup, we need to move fast and stay ahead. #CodeAI's automated coding assistant helps us do just that. Our development speed has doubled. tool for any startup."
+              - generic [ref=e2507]:
+                - img "Raj Patel" [ref=e2508]
+                - generic [ref=e2509]:
+                  - paragraph [ref=e2510]: Raj Patel
+                  - paragraph [ref=e2511]: Founder & CEO at StartUp Grid
+            - generic [ref=e2512] [cursor=pointer]:
+              - paragraph [ref=e2514]: "#VoiceGen's AI-driven voice synthesis has made creating global products a breeze. Localization is now seamless and efficient. must-have for global product teams."
+              - generic [ref=e2515]:
+                - img "Emily Chen" [ref=e2516]
+                - generic [ref=e2517]:
+                  - paragraph [ref=e2518]: Emily Chen
+                  - paragraph [ref=e2519]: Product Manager at Digital Wave
+            - generic [ref=e2520] [cursor=pointer]:
+              - paragraph [ref=e2522]: "Leveraging #DataCrunch's AI for our financial models has given us an edge in predictive accuracy. Our investment strategies are now powered by real-time data analytics. Transformative for the finance industry."
+              - generic [ref=e2523]:
+                - img "Michael Brown" [ref=e2524]
+                - generic [ref=e2525]:
+                  - paragraph [ref=e2526]: Michael Brown
+                  - paragraph [ref=e2527]: Data Scientist at FinTech Innovations
+            - generic [ref=e2528] [cursor=pointer]:
+              - paragraph [ref=e2530]: "#LogiTech's supply chain optimization tools have drastically reduced our operational costs.Efficiency and accuracy in logistics have never been better."
+              - generic [ref=e2531]:
+                - img "Linda Wu" [ref=e2532]
+                - generic [ref=e2533]:
+                  - paragraph [ref=e2534]: Linda Wu
+                  - paragraph [ref=e2535]: VP of Operations at LogiChain Solutions
+            - generic [ref=e2536] [cursor=pointer]:
+              - paragraph [ref=e2538]: "By integrating #GreenTech's sustainable energy solutions, we've seen a significant reduction in carbon footprint.Leading the way in eco-friendly business practices. Pioneering change in the industry."
+              - generic [ref=e2539]:
+                - img "Carlos Gomez" [ref=e2540]
+                - generic [ref=e2541]:
+                  - paragraph [ref=e2542]: Carlos Gomez
+                  - paragraph [ref=e2543]: Head of R&D at EcoInnovate
+        - generic [ref=e2544]:
+          - generic [ref=e2545]:
+            - generic [ref=e2546] [cursor=pointer]:
+              - paragraph [ref=e2548]: "#TrendSetter's market analysis AI has transformed how we approach fashion trends.Our campaigns are now data-driven with higher customer engagement. Revolutionizing fashion marketing."
+              - generic [ref=e2549]:
+                - img "Aisha Khan" [ref=e2550]
+                - generic [ref=e2551]:
+                  - paragraph [ref=e2552]: Aisha Khan
+                  - paragraph [ref=e2553]: Chief Marketing Officer at Fashion Forward
+            - generic [ref=e2554] [cursor=pointer]:
+              - paragraph [ref=e2556]: "Implementing #MediCareAI in our patient care systems has improved patient outcomes significantly.Technology and healthcare working hand in hand for better health. A milestone in medical technology."
+              - generic [ref=e2557]:
+                - img "Tom Chen" [ref=e2558]
+                - generic [ref=e2559]:
+                  - paragraph [ref=e2560]: Tom Chen
+                  - paragraph [ref=e2561]: Director of IT at HealthTech Solutions
+            - generic [ref=e2562] [cursor=pointer]:
+              - paragraph [ref=e2564]: "#LearnSmart's AI-driven personalized learning plans have doubled student performance metrics.Education tailored to every learner's needs. Transforming the educational landscape."
+              - generic [ref=e2565]:
+                - img "Sofia Patel" [ref=e2566]
+                - generic [ref=e2567]:
+                  - paragraph [ref=e2568]: Sofia Patel
+                  - paragraph [ref=e2569]: CEO at EduTech Innovations
+            - generic [ref=e2570] [cursor=pointer]:
+              - paragraph [ref=e2572]: "With #CyberShield's AI-powered security systems, our data protection levels are unmatched.Ensuring safety and trust in digital spaces. Redefining cybersecurity standards."
+              - generic [ref=e2573]:
+                - img "Jake Morrison" [ref=e2574]
+                - generic [ref=e2575]:
+                  - paragraph [ref=e2576]: Jake Morrison
+                  - paragraph [ref=e2577]: CTO at SecureNet Tech
+            - generic [ref=e2578] [cursor=pointer]:
+              - paragraph [ref=e2580]: "#DesignPro's AI has streamlined our creative process, enhancing productivity and innovation.Bringing creativity and technology together. A game-changer for creative industries."
+              - generic [ref=e2581]:
+                - img "Nadia Ali" [ref=e2582]
+                - generic [ref=e2583]:
+                  - paragraph [ref=e2584]: Nadia Ali
+                  - paragraph [ref=e2585]: Product Manager at Creative Solutions
+            - generic [ref=e2586] [cursor=pointer]:
+              - paragraph [ref=e2588]: "#VentureAI's insights into startup ecosystems have been invaluable for our growth and funding strategies.Empowering startups with data-driven decisions. A catalyst for startup success."
+              - generic [ref=e2589]:
+                - img "Omar Farooq" [ref=e2590]
+                - generic [ref=e2591]:
+                  - paragraph [ref=e2592]: Omar Farooq
+                  - paragraph [ref=e2593]: Founder at Startup Hub
+          - generic [ref=e2594]:
+            - generic [ref=e2595] [cursor=pointer]:
+              - paragraph [ref=e2597]: "#TrendSetter's market analysis AI has transformed how we approach fashion trends.Our campaigns are now data-driven with higher customer engagement. Revolutionizing fashion marketing."
+              - generic [ref=e2598]:
+                - img "Aisha Khan" [ref=e2599]
+                - generic [ref=e2600]:
+                  - paragraph [ref=e2601]: Aisha Khan
+                  - paragraph [ref=e2602]: Chief Marketing Officer at Fashion Forward
+            - generic [ref=e2603] [cursor=pointer]:
+              - paragraph [ref=e2605]: "Implementing #MediCareAI in our patient care systems has improved patient outcomes significantly.Technology and healthcare working hand in hand for better health. A milestone in medical technology."
+              - generic [ref=e2606]:
+                - img "Tom Chen" [ref=e2607]
+                - generic [ref=e2608]:
+                  - paragraph [ref=e2609]: Tom Chen
+                  - paragraph [ref=e2610]: Director of IT at HealthTech Solutions
+            - generic [ref=e2611] [cursor=pointer]:
+              - paragraph [ref=e2613]: "#LearnSmart's AI-driven personalized learning plans have doubled student performance metrics.Education tailored to every learner's needs. Transforming the educational landscape."
+              - generic [ref=e2614]:
+                - img "Sofia Patel" [ref=e2615]
+                - generic [ref=e2616]:
+                  - paragraph [ref=e2617]: Sofia Patel
+                  - paragraph [ref=e2618]: CEO at EduTech Innovations
+            - generic [ref=e2619] [cursor=pointer]:
+              - paragraph [ref=e2621]: "With #CyberShield's AI-powered security systems, our data protection levels are unmatched.Ensuring safety and trust in digital spaces. Redefining cybersecurity standards."
+              - generic [ref=e2622]:
+                - img "Jake Morrison" [ref=e2623]
+                - generic [ref=e2624]:
+                  - paragraph [ref=e2625]: Jake Morrison
+                  - paragraph [ref=e2626]: CTO at SecureNet Tech
+            - generic [ref=e2627] [cursor=pointer]:
+              - paragraph [ref=e2629]: "#DesignPro's AI has streamlined our creative process, enhancing productivity and innovation.Bringing creativity and technology together. A game-changer for creative industries."
+              - generic [ref=e2630]:
+                - img "Nadia Ali" [ref=e2631]
+                - generic [ref=e2632]:
+                  - paragraph [ref=e2633]: Nadia Ali
+                  - paragraph [ref=e2634]: Product Manager at Creative Solutions
+            - generic [ref=e2635] [cursor=pointer]:
+              - paragraph [ref=e2637]: "#VentureAI's insights into startup ecosystems have been invaluable for our growth and funding strategies.Empowering startups with data-driven decisions. A catalyst for startup success."
+              - generic [ref=e2638]:
+                - img "Omar Farooq" [ref=e2639]
+                - generic [ref=e2640]:
+                  - paragraph [ref=e2641]: Omar Farooq
+                  - paragraph [ref=e2642]: Founder at Startup Hub
+          - generic [ref=e2643]:
+            - generic [ref=e2644] [cursor=pointer]:
+              - paragraph [ref=e2646]: "#TrendSetter's market analysis AI has transformed how we approach fashion trends.Our campaigns are now data-driven with higher customer engagement. Revolutionizing fashion marketing."
+              - generic [ref=e2647]:
+                - img "Aisha Khan" [ref=e2648]
+                - generic [ref=e2649]:
+                  - paragraph [ref=e2650]: Aisha Khan
+                  - paragraph [ref=e2651]: Chief Marketing Officer at Fashion Forward
+            - generic [ref=e2652] [cursor=pointer]:
+              - paragraph [ref=e2654]: "Implementing #MediCareAI in our patient care systems has improved patient outcomes significantly.Technology and healthcare working hand in hand for better health. A milestone in medical technology."
+              - generic [ref=e2655]:
+                - img "Tom Chen" [ref=e2656]
+                - generic [ref=e2657]:
+                  - paragraph [ref=e2658]: Tom Chen
+                  - paragraph [ref=e2659]: Director of IT at HealthTech Solutions
+            - generic [ref=e2660] [cursor=pointer]:
+              - paragraph [ref=e2662]: "#LearnSmart's AI-driven personalized learning plans have doubled student performance metrics.Education tailored to every learner's needs. Transforming the educational landscape."
+              - generic [ref=e2663]:
+                - img "Sofia Patel" [ref=e2664]
+                - generic [ref=e2665]:
+                  - paragraph [ref=e2666]: Sofia Patel
+                  - paragraph [ref=e2667]: CEO at EduTech Innovations
+            - generic [ref=e2668] [cursor=pointer]:
+              - paragraph [ref=e2670]: "With #CyberShield's AI-powered security systems, our data protection levels are unmatched.Ensuring safety and trust in digital spaces. Redefining cybersecurity standards."
+              - generic [ref=e2671]:
+                - img "Jake Morrison" [ref=e2672]
+                - generic [ref=e2673]:
+                  - paragraph [ref=e2674]: Jake Morrison
+                  - paragraph [ref=e2675]: CTO at SecureNet Tech
+            - generic [ref=e2676] [cursor=pointer]:
+              - paragraph [ref=e2678]: "#DesignPro's AI has streamlined our creative process, enhancing productivity and innovation.Bringing creativity and technology together. A game-changer for creative industries."
+              - generic [ref=e2679]:
+                - img "Nadia Ali" [ref=e2680]
+                - generic [ref=e2681]:
+                  - paragraph [ref=e2682]: Nadia Ali
+                  - paragraph [ref=e2683]: Product Manager at Creative Solutions
+            - generic [ref=e2684] [cursor=pointer]:
+              - paragraph [ref=e2686]: "#VentureAI's insights into startup ecosystems have been invaluable for our growth and funding strategies.Empowering startups with data-driven decisions. A catalyst for startup success."
+              - generic [ref=e2687]:
+                - img "Omar Farooq" [ref=e2688]
+                - generic [ref=e2689]:
+                  - paragraph [ref=e2690]: Omar Farooq
+                  - paragraph [ref=e2691]: Founder at Startup Hub
+          - generic [ref=e2692]:
+            - generic [ref=e2693] [cursor=pointer]:
+              - paragraph [ref=e2695]: "#TrendSetter's market analysis AI has transformed how we approach fashion trends.Our campaigns are now data-driven with higher customer engagement. Revolutionizing fashion marketing."
+              - generic [ref=e2696]:
+                - img "Aisha Khan" [ref=e2697]
+                - generic [ref=e2698]:
+                  - paragraph [ref=e2699]: Aisha Khan
+                  - paragraph [ref=e2700]: Chief Marketing Officer at Fashion Forward
+            - generic [ref=e2701] [cursor=pointer]:
+              - paragraph [ref=e2703]: "Implementing #MediCareAI in our patient care systems has improved patient outcomes significantly.Technology and healthcare working hand in hand for better health. A milestone in medical technology."
+              - generic [ref=e2704]:
+                - img "Tom Chen" [ref=e2705]
+                - generic [ref=e2706]:
+                  - paragraph [ref=e2707]: Tom Chen
+                  - paragraph [ref=e2708]: Director of IT at HealthTech Solutions
+            - generic [ref=e2709] [cursor=pointer]:
+              - paragraph [ref=e2711]: "#LearnSmart's AI-driven personalized learning plans have doubled student performance metrics.Education tailored to every learner's needs. Transforming the educational landscape."
+              - generic [ref=e2712]:
+                - img "Sofia Patel" [ref=e2713]
+                - generic [ref=e2714]:
+                  - paragraph [ref=e2715]: Sofia Patel
+                  - paragraph [ref=e2716]: CEO at EduTech Innovations
+            - generic [ref=e2717] [cursor=pointer]:
+              - paragraph [ref=e2719]: "With #CyberShield's AI-powered security systems, our data protection levels are unmatched.Ensuring safety and trust in digital spaces. Redefining cybersecurity standards."
+              - generic [ref=e2720]:
+                - img "Jake Morrison" [ref=e2721]
+                - generic [ref=e2722]:
+                  - paragraph [ref=e2723]: Jake Morrison
+                  - paragraph [ref=e2724]: CTO at SecureNet Tech
+            - generic [ref=e2725] [cursor=pointer]:
+              - paragraph [ref=e2727]: "#DesignPro's AI has streamlined our creative process, enhancing productivity and innovation.Bringing creativity and technology together. A game-changer for creative industries."
+              - generic [ref=e2728]:
+                - img "Nadia Ali" [ref=e2729]
+                - generic [ref=e2730]:
+                  - paragraph [ref=e2731]: Nadia Ali
+                  - paragraph [ref=e2732]: Product Manager at Creative Solutions
+            - generic [ref=e2733] [cursor=pointer]:
+              - paragraph [ref=e2735]: "#VentureAI's insights into startup ecosystems have been invaluable for our growth and funding strategies.Empowering startups with data-driven decisions. A catalyst for startup success."
+              - generic [ref=e2736]:
+                - img "Omar Farooq" [ref=e2737]
+                - generic [ref=e2738]:
+                  - paragraph [ref=e2739]: Omar Farooq
+                  - paragraph [ref=e2740]: Founder at Startup Hub
+    - generic [ref=e2743]:
+      - generic [ref=e2744]:
+        - generic [ref=e2745]:
+          - heading "Build more. Pay less. Scale smart." [level=3] [ref=e2746]
+          - paragraph [ref=e2747]: Try free for 14 days with full access to all features. Upgrade only when your AI agent proves value.
+        - generic [ref=e2749] [cursor=pointer]:
+          - button "Monthly" [ref=e2750]:
+            - generic [ref=e2752]: Monthly
+          - button "Annually" [ref=e2753]:
+            - generic [ref=e2754]: Annually
+      - generic [ref=e2755]:
+        - generic [ref=e2760]:
+          - generic [ref=e2761]:
+            - generic [ref=e2762]:
+              - generic [ref=e2763]:
+                - heading "Startup Popular" [level=4] [ref=e2764]:
+                  - text: Startup
+                  - generic [ref=e2765]: Popular
+                - generic [ref=e2766]:
+                  - generic [ref=e2767]:
+                    - generic [ref=e2768]: $12
+                    - generic [ref=e2769]: /month
+                  - paragraph [ref=e2770]: Ideal for professionals and small teams
+              - link "Upgrade to Pro" [ref=e2771] [cursor=pointer]:
+                - /url: "#"
+            - separator [ref=e2772]
+            - generic [ref=e2773]:
+              - paragraph [ref=e2774]: Everything in Free +
+              - list [ref=e2775]:
+                - listitem [ref=e2776]:
+                  - img [ref=e2777]
+                  - generic [ref=e2779]: Custom domain
+                - listitem [ref=e2780]:
+                  - img [ref=e2781]
+                  - generic [ref=e2783]: SEO-optimizations
+                - listitem [ref=e2784]:
+                  - img [ref=e2785]
+                  - generic [ref=e2787]: Auto-generated API docs
+                - listitem [ref=e2788]:
+                  - img [ref=e2789]
+                  - generic [ref=e2791]: Built-in components library
+                - listitem [ref=e2792]:
+                  - img [ref=e2793]
+                  - generic [ref=e2795]: E-commerce integration
+                - listitem [ref=e2796]:
+                  - img [ref=e2797]
+                  - generic [ref=e2799]: User authentication system
+                - listitem [ref=e2800]:
+                  - img [ref=e2801]
+                  - generic [ref=e2803]: Multi-language support
+                - listitem [ref=e2804]:
+                  - img [ref=e2805]
+                  - generic [ref=e2807]: Real-time collaboration tools
+          - generic [ref=e2808]:
+            - generic [ref=e2809]:
+              - generic [ref=e2810]:
+                - heading "Enterprise" [level=4] [ref=e2811]
+                - generic [ref=e2812]:
+                  - generic [ref=e2813]:
+                    - generic [ref=e2814]: $24
+                    - generic [ref=e2815]: /month
+                  - paragraph [ref=e2816]: Best for large teams and enterprise-level organizations
+              - link "Contact Sales" [ref=e2817] [cursor=pointer]:
+                - /url: "#"
+            - separator [ref=e2818]
+            - generic [ref=e2819]:
+              - paragraph [ref=e2820]: Everything in Startup +
+              - list [ref=e2821]:
+                - listitem [ref=e2822]:
+                  - img [ref=e2823]
+                  - generic [ref=e2825]: Custom domain
+                - listitem [ref=e2826]:
+                  - img [ref=e2827]
+                  - generic [ref=e2829]: SEO-optimizations
+                - listitem [ref=e2830]:
+                  - img [ref=e2831]
+                  - generic [ref=e2833]: Auto-generated API docs
+                - listitem [ref=e2834]:
+                  - img [ref=e2835]
+                  - generic [ref=e2837]: Built-in components librarys
+                - listitem [ref=e2838]:
+                  - img [ref=e2839]
+                  - generic [ref=e2841]: Real-time collaboration tools
+        - generic [ref=e2843]:
+          - generic [ref=e2844]:
+            - heading "Free" [level=4] [ref=e2845]
+            - generic [ref=e2846]:
+              - generic [ref=e2847]: $0
+              - generic [ref=e2848]: /month
+            - paragraph [ref=e2849]: Perfect for individual users
+            - link "Start Free" [ref=e2850] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e2851]:
+            - paragraph [ref=e2852]: "Get Started today:"
+            - list [ref=e2853]:
+              - listitem [ref=e2854]:
+                - img [ref=e2855]
+                - generic [ref=e2857]: Custom domain
+              - listitem [ref=e2858]:
+                - img [ref=e2859]
+                - generic [ref=e2861]: SEO-optimizations
+              - listitem [ref=e2862]:
+                - img [ref=e2863]
+                - generic [ref=e2865]: Auto-generated API docs
+              - listitem [ref=e2866]:
+                - img [ref=e2867]
+                - generic [ref=e2869]: Built-in components library
+    - generic [ref=e2876]:
+      - generic [ref=e2877]:
+        - heading "Frequently Asked Questions" [level=2] [ref=e2878]
+        - paragraph [ref=e2879]: Answers to common questions about SkyAgent and its features. If you have any other questions, please don't hesitate to contact us.
+      - generic [ref=e2881]:
+        - heading "What is an AI Agent?" [level=3] [ref=e2883]:
+          - button "What is an AI Agent?" [ref=e2884]:
+            - text: What is an AI Agent?
+            - img
+        - heading "How does SkyAgent work?" [level=3] [ref=e2886]:
+          - button "How does SkyAgent work?" [ref=e2887]:
+            - text: How does SkyAgent work?
+            - img
+        - heading "How secure is my data?" [level=3] [ref=e2889]:
+          - button "How secure is my data?" [ref=e2890]:
+            - text: How secure is my data?
+            - img
+        - heading "Can I integrate my existing tools?" [level=3] [ref=e2892]:
+          - button "Can I integrate my existing tools?" [ref=e2893]:
+            - text: Can I integrate my existing tools?
+            - img
+        - heading "Is there a free trial available?" [level=3] [ref=e2895]:
+          - button "Is there a free trial available?" [ref=e2896]:
+            - text: Is there a free trial available?
+            - img
+        - heading "How does SkyAgent save me time?" [level=3] [ref=e2898]:
+          - button "How does SkyAgent save me time?" [ref=e2899]:
+            - text: How does SkyAgent save me time?
+            - img
+    - generic [ref=e2903]:
+      - heading "Ship your next feature 10x faster with CodeForge" [level=2] [ref=e2904]
+      - paragraph [ref=e2905]: Stop writing boilerplate. Let AI handle the repetitive work. Start coding smarter today, completely free.
+      - link "Start for free" [ref=e2907] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=e2908]:
+      - generic [ref=e2909]:
+        - generic [ref=e2910]:
+          - heading "Product" [level=3] [ref=e2911]
+          - list [ref=e2912]:
+            - listitem [ref=e2913]:
+              - link "Features" [ref=e2914] [cursor=pointer]:
+                - /url: "#features"
+            - listitem [ref=e2915]:
+              - link "Pricing" [ref=e2916] [cursor=pointer]:
+                - /url: "#pricing"
+            - listitem [ref=e2917]:
+              - link "Integrations" [ref=e2918] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2919]:
+              - link "Playground" [ref=e2920] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2921]:
+              - link "Multi-Agent Workflows" [ref=e2922] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e2923]:
+          - heading "Resources" [level=3] [ref=e2924]
+          - list [ref=e2925]:
+            - listitem [ref=e2926]:
+              - link "Terms of user" [ref=e2927] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2928]:
+              - link "API Reference" [ref=e2929] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2930]:
+              - link "Documentation" [ref=e2931] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2932]:
+              - link "Community" [ref=e2933] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2934]:
+              - link "Support" [ref=e2935] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e2936]:
+          - heading "Company" [level=3] [ref=e2937]
+          - list [ref=e2938]:
+            - listitem [ref=e2939]:
+              - link "About us" [ref=e2940] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2941]:
+              - link "Our team" [ref=e2942] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2943]:
+              - link "Blog" [ref=e2944] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2945]:
+              - link "Changelog" [ref=e2946] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2947]:
+              - link "Privacy" [ref=e2948] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2949]:
+              - link "Careers" [ref=e2950] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2951]:
+              - link "Brand" [ref=e2952] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2953]:
+              - link "Contact" [ref=e2954] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e2955]:
+              - link "Legal" [ref=e2956] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e2957]:
+          - img [ref=e2958]
+          - img [ref=e2965]
+          - img [ref=e2970]
+      - paragraph [ref=e2987]: © 2026 Codeforge. All rights reserved.

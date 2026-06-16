@@ -1,0 +1,54 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e5]:
+      - link "Locality" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]:
+          - img [ref=e9]
+          - text: Locality
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - img [ref=e16]
+          - text: Private by design
+        - heading "Your agents forget. Your workspace does not have to." [level=1] [ref=e18]
+        - paragraph [ref=e19]: One account connects billing and devices. Your raw coding history stays on your computer.
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - img [ref=e22]
+          - text: locality / authentication
+          - generic [ref=e27]: local
+        - generic [ref=e28]:
+          - img [ref=e29]
+          - text: Why did we choose database sessions?
+        - generic [ref=e32]:
+          - img [ref=e33]
+          - paragraph [ref=e35]: Shared web and CLI authentication made device approval, plan checks, and token revocation consistent.
+        - generic [ref=e36]:
+          - generic [ref=e37]: 3 sources
+          - generic [ref=e38]: auth.ts
+          - generic [ref=e39]: device/approve
+    - generic [ref=e41]:
+      - generic [ref=e42]: Account access
+      - heading "Welcome back." [level=2] [ref=e43]
+      - paragraph [ref=e44]: Sign in to download the CLI, connect devices and manage your plan.
+      - button "G Continue with Google" [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]: G
+        - text: Continue with Google
+      - paragraph [ref=e49]:
+        - text: By continuing, you agree to Locality's
+        - link "terms" [ref=e50] [cursor=pointer]:
+          - /url: /terms
+        - text: and
+        - link "privacy policy" [ref=e51] [cursor=pointer]:
+          - /url: /privacy
+        - text: . Your imported coding history is not uploaded by the website.
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - img [ref=e54]
+          - text: OAuth only
+        - generic [ref=e58]:
+          - img [ref=e59]
+          - text: Raw history stays local
+  - button "Open Next.js Dev Tools" [ref=e66] [cursor=pointer]:
+    - img [ref=e67]
+  - alert [ref=e70]
