@@ -87,7 +87,7 @@ function Header({ signedIn, primaryHref }: Pick<LocalityLandingProps, "signedIn"
           ))}
         </nav>
         <div className="header-actions">
-          <ThemeToggle />
+       
           <Link className="button button-small" href={primaryHref}>
             {signedIn ? "Dashboard" : "Get Started"}
           </Link>
@@ -192,7 +192,7 @@ function AgentFlowVisual() {
   ] as const;
 
   return (
-    <div className="agent-flow-card">
+    <div className="agent-flow-card ">
       <svg className="flow-map-lines" viewBox="0 0 640 380" aria-hidden="true">
         <path className="flow-path path-a" d="M170 100 C240 102 260 176 320 190" />
         <path className="flow-path path-b" d="M470 100 C400 102 380 176 320 190" />
@@ -259,18 +259,12 @@ function ContextHandoffVisual() {
       </div>
       <div className="handoff-lane" aria-hidden="true">
         <span className="handoff-rail" />
-        <div className="context-packet">
-          <Network size={15} />
-          <span>Project context</span>
-          <small>12.8 KB</small>
-        </div>
-        <span className="handoff-tick tick-one" />
-        <span className="handoff-tick tick-two" />
-        <span className="handoff-tick tick-three" />
+       
+        
       </div>
       <div className="handoff-agent handoff-target">
         <span className="handoff-icon"><Sparkles size={18} /></span>
-        <div><small>Next agent</small><strong>Claude Code</strong></div>
+        <div><small>Next agent</small><strong>Claude </strong></div>
         <i>Ready</i>
       </div>
       <div className="handoff-context">
@@ -509,7 +503,7 @@ function AgentsSection() {
       <div className="scroll-feature-content">
         <div className="feature-visual agent-visual"><SearchVisual /></div>
         <FeatureCard icon={<Network />} title="Keep memory in your Obsidian vault" text="Locality writes ordinary Markdown into the knowledge system you already own and control." />
-        <div className="feature-visual parallel-visual"><AgentFlowVisual /></div>
+
         <FeatureCard icon={<Sparkles />} title="Ask questions with local AI" text="Use Ollama through a loopback-only bridge and inspect the source notes behind every answer." />
       </div>
     </div>

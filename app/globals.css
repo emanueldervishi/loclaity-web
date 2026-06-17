@@ -83,39 +83,6 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
 
 * {
   box-sizing: border-box;
@@ -1246,7 +1213,7 @@ kbd,
 }
 
 .lp-final-cta .lp-shell { position: relative; }
-.lp-kicker.dark { color: #73c99e; }
+
 .lp-final-cta h2 { max-width: 850px; }
 .lp-final-cta p { margin: 24px 0 32px; color: #9aa49e; font-size: 16px; }
 
@@ -4900,27 +4867,7 @@ html.dark body > .site-header .icon-button:hover {
   box-shadow: none;
 }
 
-.dark .ai-chat-history-menu strong,
-.dark .ai-composer-compact textarea,
-.dark .ai-select-control,
-.dark .ai-key-modal h2,
-.dark .ai-key-modal input {
-  color: #f7f7f7;
-}
 
-.dark .ai-chat-history-menu small,
-.dark .ai-empty-compact,
-.dark .ai-chat-status-line,
-.dark .ai-key-modal p {
-  color: rgba(226, 232, 240, 0.7);
-}
-
-.dark .ai-chat-history-menu button.active,
-.dark .ai-chat-history-menu button:hover,
-.dark .ai-key-close,
-.dark .ai-key-modal input {
-  background: rgba(255, 255, 255, 0.06);
-}
 
 @media (max-width: 640px) {
   .ai-workspace-compact {
@@ -4969,15 +4916,6 @@ html.dark body > .site-header .icon-button:hover {
   background: var(--muted);
 }
 
-.dark .icon-button {
-  border-color: rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--foreground);
-}
-
-.dark .icon-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
 
 .icon-button span {
   line-height: 1;
@@ -5170,45 +5108,6 @@ html.dark body > .site-header .icon-button:hover {
   display: none;
 }
 
-.dark .dashboard-app [data-slot="button"][class*="bg-secondary"],
-.dark .dashboard-app [data-slot="button"][class*="variant-secondary"],
-.dark .dashboard-app [data-slot="button"][class*="border-border"],
-.dark .dashboard-app [data-slot="button"][class*="bg-background"],
-.dark .dashboard-app .icon-button {
-  background: linear-gradient(to bottom, rgb(255 255 255 / 0.14), rgb(255 255 255 / 0.065));
-  color: #f7f7f7;
-  box-shadow:
-    0 0 0 1px rgb(255 255 255 / 0.12),
-    0 8px 24px rgb(0 0 0 / 0.22),
-    inset 0 1px 0 rgb(255 255 255 / 0.13);
-}
-
-.dark .dashboard-app [data-slot="button"][class*="bg-secondary"]:hover,
-.dark .dashboard-app [data-slot="button"][class*="variant-secondary"]:hover,
-.dark .dashboard-app [data-slot="button"][class*="border-border"]:hover,
-.dark .dashboard-app [data-slot="button"][class*="bg-background"]:hover,
-.dark .dashboard-app .icon-button:hover {
-  background: linear-gradient(to bottom, rgb(255 255 255 / 0.2), rgb(255 255 255 / 0.1));
-  color: #fff;
-}
-
-.dark .dashboard-mobile-dock {
-  border-color: rgba(255, 255, 255, 0.09);
-  background: rgba(15, 23, 42, 0.82);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
-}
-
-.dark .dashboard-mobile-dock__item,
-.dark .dashboard-mobile-dock__theme.icon-button {
-  color: rgba(226, 232, 240, 0.78);
-}
-
-.dark .dashboard-mobile-dock__item:hover,
-.dark .dashboard-mobile-dock__item--active,
-.dark .dashboard-mobile-dock__theme.icon-button:hover {
-  background: rgba(56, 189, 248, 0.14);
-  color: #7dd3fc;
-}
 
 @media (max-width: 767px) {
   .dashboard-app {
@@ -5255,15 +5154,6 @@ html.dark body > .site-header .icon-button:hover {
     inset 0 1px 0 rgb(255 255 255 / 0.9);
 }
 
-.dark .setup-page [data-slot="button"][class*="bg-secondary"],
-.dark .setup-page [data-slot="button"][class*="variant-secondary"] {
-  background: linear-gradient(to bottom, rgb(255 255 255 / 0.14), rgb(255 255 255 / 0.065));
-  color: #f7f7f7;
-  box-shadow:
-    0 0 0 1px rgb(255 255 255 / 0.12),
-    0 8px 24px rgb(0 0 0 / 0.22),
-    inset 0 1px 0 rgb(255 255 255 / 0.13);
-}
 
 .setup-step-card {
   isolation: isolate;

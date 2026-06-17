@@ -64,7 +64,7 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
               </div>
 
               <div className="hidden items-center justify-end gap-1 md:flex">
-                <ThemeToggle showLabel />
+               
                 <Link
                   className="inline-flex size-9 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                   href="/api/auth/signout"
@@ -118,11 +118,7 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
             })}
 
             <Tooltip>
-              <DockIcon >
-                <TooltipTrigger
-                  render={<ThemeToggle className="text-black" />}
-                />
-              </DockIcon>
+              
               <TooltipContent>Theme</TooltipContent>
             </Tooltip>
 

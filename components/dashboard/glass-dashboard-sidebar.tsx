@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState, type ComponentType, type CSSProperties } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChartLine, Folders, House, MagnifyingGlass } from "@phosphor-icons/react";
+import { LogOut } from "lucide-react";
 
 const COLLAPSED_WIDTH = 64;
 const ICON_TILE_SIZE = 44;
@@ -63,6 +64,13 @@ const NAV_ITEMS: NavItem[] = [
     color: "#06D6A0",
     detail: "Plan",
   },
+  {
+    icon: LogOut,
+    label: "Sign out",
+    href: "/api/auth/signout",
+    color: "#FF006E",
+    detail: "Logout",
+  }
 ];
 
 const GLASS_STYLE = {
@@ -188,6 +196,8 @@ export function DashboardGlassSidebar({ user }: DashboardGlassSidebarProps) {
                 item={item}
               />
             ))}
+           
+             
           </div>
         </motion.nav>
       </div>

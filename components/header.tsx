@@ -33,7 +33,7 @@ export async function Header() {
         </nav>
 
         <div className="header-actions">
-          <ThemeToggle />
+    
           {session?.user ? (
             <Link className="button button-small" href="/dashboard">
               Dashboard

@@ -13,7 +13,7 @@ export const plans = {
   },
   GO: {
     name: "Go",
-    price: 9,
+    price: 2,
     description: "For developers using agents every day.",
     features: [
       "Unlimited history",
@@ -25,7 +25,7 @@ export const plans = {
   },
   PLUS: {
     name: "Plus",
-    price: 19,
+    price: 10,
     description: "A connected memory layer across your whole setup.",
     features: [
       "Everything in Go",
