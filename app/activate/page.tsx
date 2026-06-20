@@ -60,7 +60,7 @@ export default async function ActivatePage({ searchParams }: ActivateProps) {
                   This grants the device access to your plan status, not your private notes.
                 </p>
                 <span className="activate-code">{request.userCode}</span>
-                <p><strong>{request.deviceName}</strong></p>
+                <p className="mb-3"><strong>{request.deviceName}</strong></p>
                 <form action="/api/cli/device/approve" method="POST">
                   <input name="code" type="hidden" value={request.userCode} />
                   <button className="button accent full" type="submit">Authorize device</button>

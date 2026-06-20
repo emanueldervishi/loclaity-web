@@ -7,6 +7,7 @@ import { useState, type ComponentType, type CSSProperties } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChartLine, Folders, House, MagnifyingGlass } from "@phosphor-icons/react";
 import { LogOut } from "lucide-react";
+import { SignOutButton } from "@/components/sign-out-button";
 
 const COLLAPSED_WIDTH = 64;
 const ICON_TILE_SIZE = 44;
@@ -64,13 +65,6 @@ const NAV_ITEMS: NavItem[] = [
     color: "#06D6A0",
     detail: "Plan",
   },
-  {
-    icon: LogOut,
-    label: "Sign out",
-    href: "/api/auth/signout",
-    color: "#FF006E",
-    detail: "Logout",
-  }
 ];
 
 const GLASS_STYLE = {
@@ -196,8 +190,25 @@ export function DashboardGlassSidebar({ user }: DashboardGlassSidebarProps) {
                 item={item}
               />
             ))}
-           
-             
+            <div className="relative flex w-full items-center">
+              <SignOutButton
+                className="group flex w-full items-center justify-start gap-3 rounded-xl pr-0 outline-none transition-[filter] duration-200 focus-visible:ring-2 focus-visible:ring-ring/45"
+                ariaLabel="Sign out"
+              >
+                <motion.div
+                  className="flex shrink-0 items-center justify-center rounded-xl"
+                  style={{
+                    width: ICON_TILE_SIZE,
+                    height: ICON_TILE_SIZE,
+                    background: "transparent",
+                    border: "1px solid rgba(255,0,110,0.18)",
+                    transition: "background 0.2s, border-color 0.2s",
+                  }}
+                >
+                  <LogOut size={20} style={{ color: "#FF006E" }} />
+                </motion.div>
+              </SignOutButton>
+            </div>
           </div>
         </motion.nav>
       </div>

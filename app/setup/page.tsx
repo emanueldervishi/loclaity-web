@@ -22,8 +22,8 @@ const setupSteps = [
   {
     title: "Install the CLI",
     copy: "Get started with Locality",
-    command: "clean-install.cmd",
-    helper: "Download and run the Windows installer.",
+    command: "npm install -g locality-ai",
+    helper: "Download and run the npm installer.",
     icon: "terminal" as const,
   },
   {

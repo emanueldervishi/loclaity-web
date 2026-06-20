@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { Bot, CreditCard, House, LogOut, Settings, TabletSmartphone } from "lucide-react";
 import { DashboardGlassSidebar } from "@/components/dashboard/glass-dashboard-sidebar";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { SignOutButton } from "@/components/sign-out-button";
 import { Badge } from "@/components/ui/badge";
 import { Dock, DockIcon } from "@/components/ui/dock";
 import {
@@ -46,32 +46,25 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
         <DashboardGlassSidebar user={user} />
 
         <div className="flex h-full min-w-0 flex-1">
-          <div className="flex h-full min-w-0 flex-1 flex-col overflow-hidden rounded-[1.5rem] border bg-background/95 shadow-[0_18px_56px_rgba(15,23,42,0.08)] dark:bg-background/92 dark:shadow-[0_18px_56px_rgba(0,0,0,0.26)]">
-            <header className="hidden min-h-16 shrink-0 flex-col gap-3 border-b bg-background/88 px-4 py-3 backdrop-blur md:flex-row md:items-center md:justify-between md:px-5">
+          <div className="flex h-full min-w-0 flex-1 flex-col overflow-hidden rounded-[1.5rem] border bg-background/95 shadow-[0_18px_56px_rgba(15,23,42,0.08)]">
+            <header className="hidden min-h-16 shrink-0 flex-col gap-3 border-b bg-background/88 px-4 py-3 backdrop-blur md:flex md:flex-row md:items-center md:justify-between md:px-5">
               <div className="flex min-w-0 items-start gap-3">
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    <Badge
-                      className="h-6 rounded-full px-2.5"
-                      variant={user.setupComplete ? "secondary" : "outline"}
-                    >
-                      {user.setupComplete ? "Workspace ready" : "Setup required"}
-                    </Badge>
+                   
                     <span className="hidden text-sm text-muted-foreground sm:inline">{user.plan} plan</span>
                   </div>
-                  <p className="mt-2 text-sm font-medium text-foreground">Locality dashboard</p>
+                 
                 </div>
               </div>
 
               <div className="hidden items-center justify-end gap-1 md:flex">
-               
-                <Link
+                <SignOutButton
                   className="inline-flex size-9 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                  href="/api/auth/signout"
                   aria-label="Sign out"
                 >
                   <LogOut className="size-4" />
-                </Link>
+                </SignOutButton>
                 <Link
                   className="inline-flex size-9 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                   href="/dashboard/billing"
@@ -89,7 +82,7 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
         </div>
       </div>
 
-      <div className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4 md:hidden">
+            <div className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4 md:hidden">
         <TooltipProvider delay={80}>
           <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] " direction="middle" iconDistance={110} iconMagnification={54} iconSize={38}>
             {mobileNav.map((item) => {
@@ -122,17 +115,16 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
               <TooltipContent>Theme</TooltipContent>
             </Tooltip>
 
-            <Tooltip>
-              <DockIcon >
+             <Tooltip>
+              <DockIcon>
                 <TooltipTrigger
                   render={
-                    <Link
+                    <SignOutButton
                       aria-label="Sign out"
-                      
-                      href="/api/auth/signout"
+                      className="dashboard-mobile-dock__item"
                     >
-                      <LogOut className="size-4 text-red-400" />
-                    </Link>
+                      <LogOut className="size-4" />
+                    </SignOutButton>
                   }
                 />
               </DockIcon>

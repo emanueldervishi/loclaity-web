@@ -21,6 +21,13 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import {
+  SiAnthropic,
+  SiGithubcopilot,
+  SiGooglegemini,
+  SiOllama,
+  SiOpenai,
+} from "react-icons/si";
 import { plans } from "@/lib/plans";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -88,7 +95,7 @@ function Header({ signedIn, primaryHref }: Pick<LocalityLandingProps, "signedIn"
         </nav>
         <div className="header-actions">
        
-          <Link className="button button-small" href={primaryHref}>
+          <Link  className={"items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 py-2 has-[>svg]:px-3 hidden md:flex rounded-lg bg-primary px-5 text-sm font-medium  hover:bg-primary/90 text-white! bg-[lab(63.3038%_-18.433_-51.0407)]!  "} href={primaryHref}>
             {signedIn ? "Dashboard" : "Get Started"}
           </Link>
           <button className="menu-button" aria-label="Toggle menu" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
@@ -470,9 +477,48 @@ function Hero({ primaryHref }: Pick<LocalityLandingProps, "primaryHref">) {
   </>;
 }
 
+function CursorLogo() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M11.503.131 1.891 5.678a.84.84 0 0 0-.42.726v11.188c0 .3.162.575.42.724l9.609 5.55a1 1 0 0 0 .998 0l9.61-5.55a.84.84 0 0 0 .42-.724V6.404a.84.84 0 0 0-.42-.726L12.497.131a1.01 1.01 0 0 0-.996 0M2.657 6.338h18.55c.263 0 .43.287.297.515L12.23 22.918c-.062.107-.229.064-.229-.06V12.335a.59.59 0 0 0-.295-.51l-9.11-5.257c-.109-.063-.064-.23.061-.23" />
+    </svg>
+  );
+}
+
+const trustLogos = [
+  { name: "Codex", icon: SiOpenai, className: "codex" },
+  { name: "Claude Code", icon: SiAnthropic, className: "claude" },
+  { name: "Cursor", icon: CursorLogo, className: "cursor" },
+  { name: "GitHub Copilot", icon: SiGithubcopilot, className: "copilot" },
+  { name: "Gemini CLI", icon: SiGooglegemini, className: "gemini" },
+  { name: "Ollama", icon: SiOllama, className: "ollama" },
+] as const;
+
+function TrustLogoGroup({ duplicate = false }: { duplicate?: boolean }) {
+  return (
+    <div className="logo-marquee-group" aria-hidden={duplicate || undefined}>
+      {trustLogos.map(({ name, icon: Icon, className }) => (
+        <div className={`trust-logo trust-logo-${className}`} key={name}>
+          <Icon aria-hidden="true" />
+          <span>{name}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function TrustStrip() {
-  const logos = [[Command, "Codex"], [Sparkles, "Claude Code"], [Code2, "Cursor"], [Globe2, "Copilot"], [Terminal, "Gemini CLI"], [Network, "Ollama"]] as const;
-  return <section className="trust"><p>One memory across the tools you <span>already use</span></p><div className="logo-row">{logos.map(([Icon, name]) => <div key={name}><Icon /> {name}</div>)}</div></section>;
+  return (
+    <section className="trust" aria-labelledby="trust-heading">
+      <p id="trust-heading">One memory across the tools you already use</p>
+      <div className="logo-marquee" role="region" aria-label="Supported coding tools">
+        <div className="logo-marquee-track">
+          <TrustLogoGroup />
+          <TrustLogoGroup duplicate />
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function FeatureCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
