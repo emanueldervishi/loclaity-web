@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import type Stripe from "stripe";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { PaidPlan, priceIdForPlan } from "@/lib/plans";
@@ -57,11 +58,14 @@ export async function POST(request: Request) {
       });
     }
 
-    const checkout = await stripe.checkout.sessions.create({
+    const checkoutParams = {
       mode: "subscription",
       customer: customerId,
       line_items: [{ price: priceId, quantity: 1 }],
       allow_promotion_codes: true,
+      branding_settings: {
+        display_name: "Locality"
+      },
       client_reference_id: user.id,
       metadata: {
         localityUserId: user.id,
@@ -75,7 +79,11 @@ export async function POST(request: Request) {
       },
       success_url: `${baseUrl}/dashboard?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/pricing`
-    });
+    } satisfies Stripe.Checkout.SessionCreateParams & {
+      branding_settings: { display_name: string };
+    };
+
+    const checkout = await stripe.checkout.sessions.create(checkoutParams);
 
     if (!checkout.url) throw new Error("Stripe did not return a checkout URL.");
     return NextResponse.redirect(checkout.url, 303);
