@@ -23,11 +23,12 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
   SiAnthropic,
-  SiGithubcopilot,
-  SiGooglegemini,
+  SiGithub,
+  SiObsidian,
   SiOllama,
   SiOpenai,
 } from "react-icons/si";
+import { BrandLogo, BrandMark } from "@/components/brand-logo";
 import { plans } from "@/lib/plans";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -61,16 +62,9 @@ function Logo() {
   return (
     <Link className="logo" href="#top" aria-label="Locality home">
       <span className="logo-image-tile">
-        <Image
-          src="/logo.png"
-          alt=""
-          width={30}
-          height={30}
-          className="logo-image"
-          priority
-        />
+        <BrandMark className="logo-image text-foreground" />
       </span>
-      <span>Locality</span>
+      <BrandLogo className="h-6 text-foreground" />
     </Link>
   );
 }
@@ -486,11 +480,11 @@ function CursorLogo() {
 }
 
 const trustLogos = [
-  { name: "Codex", icon: SiOpenai, className: "codex" },
-  { name: "Claude Code", icon: SiAnthropic, className: "claude" },
+  { name: "OpenAI", icon: SiOpenai, className: "codex" },
+  { name: "Anthropic", icon: SiAnthropic, className: "claude" },
   { name: "Cursor", icon: CursorLogo, className: "cursor" },
-  { name: "GitHub Copilot", icon: SiGithubcopilot, className: "copilot" },
-  { name: "Gemini CLI", icon: SiGooglegemini, className: "gemini" },
+  { name: "GitHub", icon: SiGithub, className: "copilot" },
+  { name: "Obsidian", icon: SiObsidian, className: "gemini" },
   { name: "Ollama", icon: SiOllama, className: "ollama" },
 ] as const;
 

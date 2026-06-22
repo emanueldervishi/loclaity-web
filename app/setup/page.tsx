@@ -5,18 +5,23 @@ import {
   Search,
   ShieldCheck,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
+import { BrandMark } from "@/components/brand-logo";
 import { CopyCommand } from "@/components/setup/copy-command";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getDashboardSetupStatus } from "@/lib/dashboard-setup";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Setup",
-};
+  description:
+    "Install the Locality CLI, authorize your device, import recent coding sessions, and unlock local-first project memory.",
+  path: "/setup",
+  noIndex: true,
+});
 
 const setupSteps = [
   {
@@ -58,7 +63,7 @@ export default async function SetupPage() {
   const completedSteps = setup.complete ? 2 : 0;
 
   return (
-    <main className="setup-page min-h-dvh overflow-hidden bg-[linear-gradient(135deg,var(--background),var(--muted)_48%,var(--background))] p-3 text-foreground md:p-5">
+    <main className="min-h-dvh overflow-hidden bg-[linear-gradient(135deg,var(--background),var(--muted)_48%,var(--background))] p-3 text-foreground md:p-5">
       <div className="pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:34px_34px] [mask-image:radial-gradient(circle_at_50%_10%,black,transparent_72%)] dark:bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)]" />
       <div className="pointer-events-none fixed inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_50%_0%,rgba(14,165,233,0.22),transparent_54%)] blur-2xl" />
 
@@ -77,7 +82,7 @@ export default async function SetupPage() {
         </div>
 
         <div className="mt-14 grid gap-10">
-          <div className=" setup-step-row grid gap-10 md:grid-cols-4">
+          <div className="grid gap-10 md:grid-cols-4">
             {setupSteps.map((step, index) => {
               const complete = index < completedSteps;
               const number = String(index + 1).padStart(2, "0");
@@ -85,14 +90,17 @@ export default async function SetupPage() {
               const Icon = isTerminal ? null : step.icon;
 
               return (
-                <article className="setup-step-card group relative min-h-[196px] overflow-visible rounded-2xl border bg-card/82 p-4 shadow-[0_16px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl" key={step.title}>
+                <article className="group relative min-h-[196px] overflow-visible rounded-2xl border bg-card/82 p-4 shadow-[0_16px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl" key={step.title}>
                   {index < setupSteps.length - 1 ? (
-                    <span className="setup-step-connector hidden md:block" aria-hidden="true" />
+                    <span
+                      className="pointer-events-none absolute left-[calc(100%-0.3rem)] top-10 hidden h-px w-10 bg-[linear-gradient(90deg,color-mix(in_oklch,var(--border),transparent_8%),transparent)] md:block"
+                      aria-hidden="true"
+                    />
                   ) : null}
                   <div className="flex items-start justify-between gap-4">
                     <div className={`grid size-10 place-items-center rounded-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] ${complete ? "bg-emerald-500/15" : "bg-muted"}`}>
                       {isTerminal ? (
-                        <Image src="/logo.png" alt="" width={30} height={30} className="rounded-lg bg-white object-cover" />
+                        <BrandMark className="size-7 text-foreground" />
                       ) : Icon ? (
                         <Icon className={`size-5 ${complete ? "text-emerald-600 dark:text-emerald-300" : "text-primary"}`} />
                       ) : null}

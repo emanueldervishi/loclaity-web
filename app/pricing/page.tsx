@@ -3,10 +3,14 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Pricing } from "@/components/pricing";
 import { prisma } from "@/lib/prisma";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Pricing"
-};
+export const metadata = buildMetadata({
+  title: "Pricing",
+  description:
+    "Compare Locality Free, Go, and Plus plans for local-first project memory, searchable coding sessions, and private AI coding context.",
+  path: "/pricing",
+});
 
 export default async function PricingPage() {
   const session = await auth();

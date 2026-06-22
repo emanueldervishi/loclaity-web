@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 import { Bot, CreditCard, House, LogOut, Settings, TabletSmartphone } from "lucide-react";
 import { DashboardGlassSidebar } from "@/components/dashboard/glass-dashboard-sidebar";
 import { SignOutButton } from "@/components/sign-out-button";
-import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Dock, DockIcon } from "@/components/ui/dock";
 import {
   Tooltip,
@@ -41,7 +41,7 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
   }
 
   return (
-    <div className="dashboard-app h-dvh overflow-hidden bg-[linear-gradient(180deg,color-mix(in_oklch,var(--background),var(--muted)_48%),var(--background))] p-2 text-foreground">
+    <div className="h-dvh overflow-hidden bg-[linear-gradient(180deg,color-mix(in_oklch,var(--background),var(--muted)_48%),var(--background))] p-2 text-foreground">
       <div className="flex h-full w-full gap-3">
         <DashboardGlassSidebar user={user} />
 
@@ -59,6 +59,7 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
               </div>
 
               <div className="hidden items-center justify-end gap-1 md:flex">
+                <ThemeToggle className="inline-flex size-9 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-muted hover:text-foreground" />
                 <SignOutButton
                   className="inline-flex size-9 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                   aria-label="Sign out"
@@ -111,7 +112,13 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
             })}
 
             <Tooltip>
-              
+              <DockIcon>
+                <TooltipTrigger
+                  render={
+                    <ThemeToggle className="inline-flex size-10 items-center justify-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground" />
+                  }
+                />
+              </DockIcon>
               <TooltipContent>Theme</TooltipContent>
             </Tooltip>
 
@@ -121,7 +128,7 @@ export function DashboardShell({ children, user }: DashboardShellProps) {
                   render={
                     <SignOutButton
                       aria-label="Sign out"
-                      className="dashboard-mobile-dock__item"
+                      className="inline-flex size-10 items-center justify-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground"
                     >
                       <LogOut className="size-4" />
                     </SignOutButton>

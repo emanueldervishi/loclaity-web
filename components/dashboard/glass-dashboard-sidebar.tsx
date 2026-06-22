@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, type ComponentType, type CSSProperties } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChartLine, Folders, House, MagnifyingGlass } from "@phosphor-icons/react";
 import { LogOut } from "lucide-react";
+import { BrandMark } from "@/components/brand-logo";
 import { SignOutButton } from "@/components/sign-out-button";
 
 const COLLAPSED_WIDTH = 64;
@@ -170,14 +170,7 @@ export function DashboardGlassSidebar({ user }: DashboardGlassSidebarProps) {
             aria-label="Locality home"
           >
             <div className="grid size-11 shrink-0 place-items-center overflow-hidden rounded-[1rem] bg-white shadow-[0_8px_22px_rgba(15,23,42,0.16),inset_0_1px_0_rgba(255,255,255,0.9)]">
-              <Image
-                src="/logo.png"
-                alt=""
-                width={44}
-                height={44}
-                className="size-11 object-cover"
-                priority
-              />
+              <BrandMark className="size-7 text-black" />
             </div>
           </Link>
 

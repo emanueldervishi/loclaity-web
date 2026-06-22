@@ -1,19 +1,9 @@
-import Image from "next/image";
+import { BrandLogo } from "@/components/brand-logo";
 
 export function Logo() {
   return (
-    <span className="brand">
-      <span className="brand-logo-tile">
-        <Image
-          src="/logo.png"
-          alt=""
-          width={30}
-          height={30}
-          className="brand-logo-image"
-          priority
-        />
-      </span>
-      Locality
+    <span className="brand" aria-label="Locality">
+      <BrandLogo className="h-7 text-foreground" />
     </span>
   );
 }

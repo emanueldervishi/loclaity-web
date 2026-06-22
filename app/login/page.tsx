@@ -1,12 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth, signIn } from "@/auth";
+import { BrandMark } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Sign in",
-};
+  description:
+    "Sign in to Locality to access your private workspace, manage imports, and keep Codex project memory connected.",
+  path: "/login",
+  noIndex: true,
+});
 
 type LoginProps = {
   searchParams: Promise<{
@@ -16,8 +21,8 @@ type LoginProps = {
 
 function LocalityLogo() {
   return (
-    <Link href="/" aria-label="Locality home" className="inline-flex">
-      <Image src="/logo.png" alt="Locality" width={30} height={30} priority />
+    <Link href="/" aria-label="Locality home" className="inline-flex text-foreground">
+      <BrandMark className="size-8" />
     </Link>
   );
 }

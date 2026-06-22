@@ -14,10 +14,15 @@ import {
 } from "@/components/ui/card";
 import { requireDashboardSetup } from "@/lib/dashboard-setup";
 import { prisma } from "@/lib/prisma";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Devices",
-};
+  description:
+    "Review authorized Locality devices and control which computers can import project memory from the CLI.",
+  path: "/dashboard/devices",
+  noIndex: true,
+});
 
 export default async function DashboardDevicesPage() {
   const session = await auth();

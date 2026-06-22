@@ -1,9 +1,13 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Privacy"
-};
+export const metadata = buildMetadata({
+  title: "Privacy",
+  description:
+    "Read how Locality handles account data, billing identifiers, and local-first project memory for Codex users.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

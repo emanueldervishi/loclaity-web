@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/codeforge/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { buildMetadata, seoConfig } from "@/lib/seo";
 import "@/app/globals.css";
-import "@/app/locality-landing.css";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -16,17 +17,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  ...buildMetadata(),
+  metadataBase: new URL(seoConfig.siteUrl),
+  applicationName: seoConfig.name,
+  authors: [{ name: seoConfig.name }],
+  creator: seoConfig.name,
+  publisher: seoConfig.name,
+  category: "developer tools",
   title: {
-    default: "Locality - Memory for coding agents",
-    template: "%s - Locality"
+    default: seoConfig.title,
+    template: "%s"
   },
-  description:
-    "Turn Codex, Claude Code, Cursor, Copilot and other coding-agent sessions into searchable local memory.",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png"
-  }
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg"
+  },
+  manifest: "/manifest.webmanifest"
 };
 
 export default function RootLayout({
@@ -35,12 +42,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={`${geist.variable} ${geistMono.variable}`}>
-        <TooltipProvider>
-          {children}
-          <Analytics />
-        </TooltipProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          storageKey="locality-theme"
+        >
+          <TooltipProvider>
+            {children}
+            <Analytics />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

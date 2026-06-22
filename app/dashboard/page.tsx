@@ -27,10 +27,15 @@ import { reconcileCheckoutSession } from "@/lib/billing";
 import { requireDashboardSetup } from "@/lib/dashboard-setup";
 import { plans } from "@/lib/plans";
 import { prisma } from "@/lib/prisma";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Dashboard",
-};
+  description:
+    "Manage your Locality workspace, billing, authorized devices, and private AI coding memory from one dashboard.",
+  path: "/dashboard",
+  noIndex: true,
+});
 
 type DashboardProps = {
   searchParams: Promise<{

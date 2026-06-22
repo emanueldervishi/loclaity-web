@@ -16,10 +16,15 @@ import { Separator } from "@/components/ui/separator";
 import { requireDashboardSetup } from "@/lib/dashboard-setup";
 import { plans } from "@/lib/plans";
 import { prisma } from "@/lib/prisma";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Billing",
-};
+  description:
+    "View your Locality plan, subscription status, and Stripe billing controls for local-first project memory.",
+  path: "/dashboard/billing",
+  noIndex: true,
+});
 
 export default async function DashboardBillingPage() {
   const session = await auth();

@@ -1,9 +1,13 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Terms"
-};
+export const metadata = buildMetadata({
+  title: "Terms",
+  description:
+    "Review Locality terms for subscriptions, account access, and ownership of imported coding history and project memory.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

@@ -1,21 +1,7 @@
-import { auth } from "@/auth";
-import { LocalityLanding } from "@/components/locality-landing";
-import { prisma } from "@/lib/prisma";
+"use client";
 
-export default async function HomePage() {
-  const session = await auth();
-  const user = session?.user?.id
-    ? await prisma.user.findUnique({
-        where: { id: session.user.id },
-        select: { plan: true }
-      })
-    : null;
+import { HomePageClient } from "@/components/codeforge/home-page-client";
 
-  return (
-    <LocalityLanding
-      signedIn={Boolean(session?.user)}
-      primaryHref={session?.user ? "/dashboard" : "/login"}
-      currentPlan={user?.plan ?? "FREE"}
-    />
-  );
+export default function HomePage() {
+  return <HomePageClient />;
 }
