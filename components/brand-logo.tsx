@@ -33,7 +33,7 @@ export function BrandLogo({ className }: LogoProps) {
         letterSpacing="0"
         fontFamily="var(--font-geist), Segoe UI, sans-serif"
       >
-        Localty
+        Locality
       </text>
     </svg>
   );

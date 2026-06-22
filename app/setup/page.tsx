@@ -34,7 +34,7 @@ const setupSteps = [
   {
     title: "Authorize this device",
     copy: "Secure this computer",
-    command: "locality login",
+    command: "locality setup",
     helper: "Approve the browser code to unlock the dashboard.",
     icon: ShieldCheck,
   },
