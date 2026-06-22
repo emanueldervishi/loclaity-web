@@ -30,7 +30,11 @@ export function ThemeToggle({ className, showLabel = false }: ThemeToggleProps) 
 
   return (
     <button
-      className={cn("icon-button", className)}
+      className={cn(
+        "inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background/80 text-foreground transition-colors hover:bg-muted",
+        showLabel && "w-auto gap-2 px-3",
+        className
+      )}
       type="button"
       aria-label="Toggle theme"
       onClick={toggleTheme}

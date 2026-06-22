@@ -21,12 +21,18 @@ export default async function PricingPage() {
   return (
     <>
       <Header />
-      <main className="page-main app-page pricing-page">
-        <div className="shell">
-          <div className="page-heading centered-heading">
-            <span className="eyebrow">Simple monthly plans</span>
-            <h1>Choose how much memory you need.</h1>
-            <p>Free stays useful. Go removes limits. Plus connects more of your development setup.</p>
+      <main className="min-h-[calc(100dvh-8rem)] bg-background px-4 py-10 text-foreground sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <span className="inline-flex rounded-full border bg-muted px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              Simple monthly plans
+            </span>
+            <h1 className="mt-5 text-4xl font-semibold leading-[1.02] tracking-[-0.05em] md:text-6xl">
+              Choose how much memory you need.
+            </h1>
+            <p className="mt-4 text-sm leading-6 text-muted-foreground md:text-base">
+              Free stays useful. Go removes limits. Plus connects more of your development setup.
+            </p>
           </div>
           <Pricing signedIn={Boolean(session?.user)} currentPlan={user?.plan ?? "FREE"} />
         </div>
